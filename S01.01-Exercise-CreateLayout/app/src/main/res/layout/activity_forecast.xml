@@ -22,7 +22,6 @@
     <!--TODO (8) Wrap the TextView in a ScrollView-->
     <!--TODO (9) Set the ScrollView width to match_parent and the height to wrap_content-->
 
-    <!--TODO (4) Set the text size to 20sp-->
     <!--TODO (5) Remove all attributes with the word constraint in them-->
     <!--TODO (6) Remove the default text from the TextView-->
     <ScrollView
@@ -35,6 +34,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Hello World!"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/activity_main"
             app:layout_constraintLeft_toLeftOf="@+id/activity_main"
             app:layout_constraintRight_toRightOf="@+id/activity_main"
