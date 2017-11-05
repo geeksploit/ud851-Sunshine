@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 "The day after tomorrow, Sunshine -5C / -9C"
         };
 
-        // TODO (4) Append each String from the fake weather data array to the TextView
+        for (String s : fakeWeatheData) {
+            weatherDisplay.append(s);
+        }
     }
 }
