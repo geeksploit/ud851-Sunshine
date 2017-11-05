@@ -17,9 +17,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--TODO (8) Wrap the TextView in a ScrollView-->
-    <!--TODO (9) Set the ScrollView width to match_parent and the height to wrap_content-->
-
     <!--TODO (6) Remove the default text from the TextView-->
     <ScrollView
         android:layout_width="match_parent"
