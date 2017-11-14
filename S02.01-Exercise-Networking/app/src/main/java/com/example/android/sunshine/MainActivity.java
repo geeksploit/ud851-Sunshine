@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     // COMPLETED (5) Create a class that extends AsyncTask to perform network requests
     // COMPLETED (6) Override the doInBackground method to perform your network requests
-    // TODO (7) Override the onPostExecute method to display the results of the network request
+    // COMPLETED (7) Override the onPostExecute method to display the results of the network request
     class FethcWeatheDataAsyncTask extends AsyncTask<String, Void, String[]> {
         @Override
         protected String[] doInBackground(String... params) {
@@ -68,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] data) {
+            if (data == null) return;
+
+            for (String s : data) {
+                mWeatherTextView.append(s + "\n");
+            }
         }
     }
 }
