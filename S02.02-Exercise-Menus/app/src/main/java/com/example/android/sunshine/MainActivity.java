@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // TODO (2) Create a menu resource in res/menu/ called forecast.xml
+    // COMPLETED (2) Create a menu resource in res/menu/ called forecast.xml
     // TODO (3) Add one item to the menu with an ID of action_refresh
     // TODO (4) Set the title of the menu item to "Refresh" using strings.xml
 
