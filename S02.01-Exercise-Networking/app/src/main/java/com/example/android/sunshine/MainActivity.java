@@ -15,6 +15,7 @@
  */
 package com.example.android.sunshine;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO (8) Create a method that will get the user's preferred location and execute your new AsyncTask and call it loadWeatherData
 
-    // TODO (5) Create a class that extends AsyncTask to perform network requests
+    // COMPLETED (5) Create a class that extends AsyncTask to perform network requests
     // TODO (6) Override the doInBackground method to perform your network requests
     // TODO (7) Override the onPostExecute method to display the results of the network request
+    class FethcWeatheDataAsyncTask extends AsyncTask<String, Void, String[]> {
+    }
 }
