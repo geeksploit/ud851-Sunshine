@@ -57,15 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 "Mon, May 30 - Post Apocalypse - 15°C / 10°C",
         };
 
-        // TODO (3) Delete the for loop that populates the TextView with dummy data
-        /*
-         * Iterate through the array and append the Strings to the TextView. The reason why we add
-         * the "\n\n\n" after the String is to give visual separation between each String in the
-         * TextView. Later, we'll learn about a better way to display lists of data.
-         */
-        for (String dummyWeatherDay : dummyWeatherData) {
-            mWeatherTextView.append(dummyWeatherDay + "\n\n\n");
-        }
+        // COMPLETED (3) Delete the for loop that populates the TextView with dummy data
 
         // TODO (9) Call loadWeatherData to perform the network request to get the weather
     }
