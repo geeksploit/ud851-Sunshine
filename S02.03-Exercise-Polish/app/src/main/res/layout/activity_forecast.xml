@@ -35,6 +35,7 @@
     <!--COMPLETED (4) Give the TextView a default error message stating that an error occurred (use strings.xml)-->
     <!--COMPLETED (5) Set the default visibility of the TextView to invisible-->
     <TextView
+        android:id="@+id/tv_error_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/message_error"
