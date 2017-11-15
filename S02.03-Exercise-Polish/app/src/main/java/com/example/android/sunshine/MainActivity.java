@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.android.sunshine.data.SunshinePreferences;
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (6) Add a TextView variable for the error message display
     private TextView mErrorMessageTextView;
 
-    // TODO (16) Add a ProgressBar variable to show and hide the progress bar
+    // COMPLETED (16) Add a ProgressBar variable to show and hide the progress bar
+    private ProgressBar mFetchWeatherDataProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
