@@ -86,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
-        // TODO (18) Within your AsyncTask, override the method onPreExecute and show the loading indicator
+        // COMPLETED (18) Within your AsyncTask, override the method onPreExecute and show the loading indicator
+        @Override
+        protected void onPreExecute() {
+            mFetchWeatherDataProgressBar.setVisibility(View.VISIBLE);
+            super.onPreExecute();
+        }
 
         @Override
         protected String[] doInBackground(String... params) {
