@@ -75,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
         mWeatherTextView.setVisibility(View.VISIBLE);
     }
 
-    // TODO (9) Create a method called showErrorMessage that will hide the weather data and show the error message
+    // COMPLETED (9) Create a method called showErrorMessage that will hide the weather data and show the error message
+    private void showErrorMessage() {
+        mWeatherTextView.setVisibility(View.INVISIBLE);
+        mErrorMessageTextView.setVisibility(View.VISIBLE);
+    }
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
