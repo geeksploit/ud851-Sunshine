@@ -46,6 +46,7 @@
     <!--COMPLETED (14) Set the layout_gravity of the ProgressBar to center-->
     <!--COMPLETED (15) Set the default visibility of the ProgressBar to invisible-->
     <ProgressBar
+        android:id="@+id/pb_fetch_weather_data"
         android:layout_width="@dimen/progressbar_size"
         android:layout_height="@dimen/progressbar_size"
         android:layout_gravity="center"
