@@ -13,5 +13,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_view_height" />
+        android:layout_height="@dimen/list_item_view_height"
+        android:background="@color/list_item_view_color" />
 </LinearLayout>
