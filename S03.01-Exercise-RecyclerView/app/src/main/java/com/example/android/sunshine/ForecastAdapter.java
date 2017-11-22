@@ -23,6 +23,11 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         holder.mWeatherTextView.setText(weatherDataText);
     }
 
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
         public final TextView mWeatherTextView;
 

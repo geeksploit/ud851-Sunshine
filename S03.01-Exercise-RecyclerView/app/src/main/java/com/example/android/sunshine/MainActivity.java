@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (27) Override onBindViewHolder
     // COMPLETED (28) Set the text of the TextView to the weather for this list item's position
 
-    // TODO (29) Override getItemCount
+    // COMPLETED (29) Override getItemCount
     // TODO (30) Return 0 if mWeatherData is null, or the size of mWeatherData if it is not null
 
     // TODO (31) Create a setWeatherData method that saves the weatherData to mWeatherData
