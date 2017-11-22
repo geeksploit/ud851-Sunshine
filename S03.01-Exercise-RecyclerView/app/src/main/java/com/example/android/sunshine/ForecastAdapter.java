@@ -10,6 +10,7 @@ public class ForecastAdapter {
 
         public ForecastAdapterViewHolder(View itemView) {
             super(itemView);
+            mWeatherTextView = (TextView) itemView.findViewById(R.id.tv_weather_data);
         }
     }
 }
