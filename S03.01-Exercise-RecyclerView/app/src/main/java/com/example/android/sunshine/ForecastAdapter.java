@@ -25,6 +25,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     @Override
     public int getItemCount() {
+        if (mWeatherData != null) return mWeatherData.length;
         return 0;
     }
 
