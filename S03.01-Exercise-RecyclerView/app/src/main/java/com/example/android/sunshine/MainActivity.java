@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (17) Extend RecyclerView.ViewHolder
 
     // Within ForecastAdapterViewHolder ///////////////////////////////////////////////////////////
-    // TODO (18) Create a public final TextView variable called mWeatherTextView
+    // COMPLETED (18) Create a public final TextView variable called mWeatherTextView
 
     // TODO (19) Create a constructor for this class that accepts a View as a parameter
     // TODO (20) Call super(view) within the constructor for ForecastAdapterViewHolder
