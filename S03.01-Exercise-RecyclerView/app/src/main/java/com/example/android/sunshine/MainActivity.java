@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     // TODO (47) Create the default constructor (we will pass in parameters in a later lesson)
 
     // COMPLETED (16) Create a class within ForecastAdapter called ForecastAdapterViewHolder
-    // TODO (17) Extend RecyclerView.ViewHolder
+    // COMPLETED (17) Extend RecyclerView.ViewHolder
 
     // Within ForecastAdapterViewHolder ///////////////////////////////////////////////////////////
     // TODO (18) Create a public final TextView variable called mWeatherTextView
