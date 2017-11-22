@@ -29,6 +29,10 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         return 0;
     }
 
+    void setWeatherData(String[] weatherData) {
+        mWeatherData = weatherData;
+    }
+
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
         public final TextView mWeatherTextView;
 
