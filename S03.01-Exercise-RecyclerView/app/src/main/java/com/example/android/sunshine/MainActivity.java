@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // COMPLETED (24) Override onCreateViewHolder
-    // TODO (25) Within onCreateViewHolder, inflate the list item xml into a view
+    // COMPLETED (25) Within onCreateViewHolder, inflate the list item xml into a view
     // TODO (26) Within onCreateViewHolder, return a new ForecastAdapterViewHolder with the above view passed in as a parameter
 
     // TODO (27) Override onBindViewHolder
