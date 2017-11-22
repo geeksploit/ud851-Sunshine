@@ -17,6 +17,10 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         return new ForecastAdapterViewHolder(view);
     }
 
+    @Override
+    public void onBindViewHolder(ForecastAdapterViewHolder holder, int position) {
+    }
+
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
         public final TextView mWeatherTextView;
 
