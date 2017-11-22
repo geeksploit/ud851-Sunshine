@@ -14,7 +14,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         boolean attachToParentNow = false;
         View view = layoutInflater.inflate(R.layout.forecast_list_item, parent, attachToParentNow);
-        return null;
+        return new ForecastAdapterViewHolder(view);
     }
 
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
