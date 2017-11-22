@@ -19,6 +19,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     @Override
     public void onBindViewHolder(ForecastAdapterViewHolder holder, int position) {
+        String weatherDataText = String.valueOf(mWeatherData[position]);
+        holder.mWeatherTextView.setText(weatherDataText);
     }
 
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
