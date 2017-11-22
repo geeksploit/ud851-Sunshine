@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Within ForecastAdapter.java /////////////////////////////////////////////////////////////////
-    // TODO (15) Add a class file called ForecastAdapter
+    // COMPLETED (15) Add a class file called ForecastAdapter
     // TODO (22) Extend RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder>
 
     // TODO (23) Create a private string array called mWeatherData
