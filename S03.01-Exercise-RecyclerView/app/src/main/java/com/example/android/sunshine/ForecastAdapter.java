@@ -31,6 +31,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     void setWeatherData(String[] weatherData) {
         mWeatherData = weatherData;
+        notifyDataSetChanged();
     }
 
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
