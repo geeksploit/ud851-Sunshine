@@ -2,10 +2,17 @@ package com.example.android.sunshine;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder> {
     private String[] mWeatherData;
+
+    @Override
+    public ForecastAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return null;
+    }
+
     class ForecastAdapterViewHolder extends RecyclerView.ViewHolder {
         public final TextView mWeatherTextView;
 
