@@ -84,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
     // Within ForecastAdapter.java /////////////////////////////////////////////////////////////////
 
 
-    // TODO (33) Delete mWeatherTextView
-    private TextView mWeatherTextView;
+    // COMPLETED (33) Delete mWeatherTextView
 
     // TODO (34) Add a private RecyclerView variable called mRecyclerView
     // TODO (35) Add a private ForecastAdapter variable called mForecastAdapter
