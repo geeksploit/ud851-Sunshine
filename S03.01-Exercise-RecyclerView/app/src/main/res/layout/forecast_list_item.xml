@@ -14,5 +14,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_view_height"
+        android:layout_marginLeft="@dimen/list_item_view_margin"
+        android:layout_marginRight="@dimen/list_item_view_margin"
         android:background="@color/list_item_view_color" />
 </LinearLayout>
