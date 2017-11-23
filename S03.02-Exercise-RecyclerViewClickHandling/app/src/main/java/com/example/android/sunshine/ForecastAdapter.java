@@ -30,7 +30,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     private String[] mWeatherData;
 
-    // TODO (3) Create a final private ForecastAdapterOnClickHandler called mClickHandler
+    // COMPLETED (3) Create a final private ForecastAdapterOnClickHandler called mClickHandler
+    private final ForecastAdapterOnClickHandler mClickHandler;
 
     // COMPLETED (1) Add an interface called ForecastAdapterOnClickHandler
     // COMPLETED (2) Within that interface, define a void method that access a String as a parameter
