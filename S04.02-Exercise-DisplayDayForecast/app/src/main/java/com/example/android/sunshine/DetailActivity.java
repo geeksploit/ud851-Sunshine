@@ -16,5 +16,7 @@ public class DetailActivity extends AppCompatActivity {
 
         // TODO (2) Display the weather forecast that was passed from MainActivity
         Intent intent = getIntent();
+        if (intent.hasExtra(Intent.EXTRA_TEXT)) {
+        }
     }
 }
