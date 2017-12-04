@@ -16,6 +16,7 @@ public class DetailActivity extends AppCompatActivity {
 
         // TODO (2) Display the weather forecast that was passed from MainActivity
         Intent intent = getIntent();
+        if (intent == null) return;
         if (intent.hasExtra(Intent.EXTRA_TEXT)) {
             String weatherInfo = intent.getStringExtra(Intent.EXTRA_TEXT);
             TextView textView = (TextView) findViewById(R.id.tv_weather_data);
