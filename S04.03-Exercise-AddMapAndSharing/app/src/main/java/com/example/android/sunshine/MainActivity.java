@@ -225,7 +225,9 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
             Uri addressUri = Uri.parse("geo:0,0?q=Sunshine");
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(addressUri);
-            startActivity(intent);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
         }
 
         return super.onOptionsItemSelected(item);
