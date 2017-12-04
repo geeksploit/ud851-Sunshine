@@ -34,7 +34,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     // COMPLETED (3) Create a menu with an item with id of action_share
-    // TODO (4) Display the menu and implement the forecast sharing functionality
+    // COMPLETED (4) Display the menu and implement the forecast sharing functionality
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -50,6 +50,10 @@ public class DetailActivity extends AppCompatActivity {
                     .setType("text/plain")
                     .setText(mForecast)
                     .getIntent();
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                return true;
+            }
         }
         return super.onOptionsItemSelected(item);
     }
