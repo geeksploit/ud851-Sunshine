@@ -18,6 +18,8 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent.hasExtra(Intent.EXTRA_TEXT)) {
             String weatherInfo = intent.getStringExtra(Intent.EXTRA_TEXT);
+            TextView textView = (TextView) findViewById(R.id.tv_weather_data);
+            textView.setText(weatherInfo);
         }
     }
 }
