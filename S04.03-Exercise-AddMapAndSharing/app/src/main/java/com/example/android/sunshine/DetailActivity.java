@@ -2,6 +2,7 @@ package com.example.android.sunshine;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -44,6 +45,11 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_share) {
+            Intent intent = ShareCompat.IntentBuilder.from(this)
+                    .setChooserTitle("Share")
+                    .setType("text/plain")
+                    .setText(mForecast)
+                    .getIntent();
         }
         return super.onOptionsItemSelected(item);
     }
