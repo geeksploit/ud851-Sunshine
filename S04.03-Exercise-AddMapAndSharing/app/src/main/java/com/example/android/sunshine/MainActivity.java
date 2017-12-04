@@ -222,6 +222,7 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
 
         // TODO (2) Launch the map when the map menu item is clicked
         if (id == R.id.action_open_map) {
+            Uri addressUri = Uri.parse("geo:0,0?q=Sunshine");
         }
 
         return super.onOptionsItemSelected(item);
