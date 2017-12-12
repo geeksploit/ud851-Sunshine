@@ -102,17 +102,8 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
          */
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);
 
-        // TODO (7) Remove the code for the AsyncTask and initialize the AsyncTaskLoader
-        /* Once all of our views are setup, we can load the weather data. */
-        loadWeatherData();
-    }
-
-    /**
-     * This method will get the user's preferred location for weather, and then tell some
-     * background method to get the weather data in the background.
-     */
-    private void loadWeatherData() {
-        showWeatherDataView();
+        // COMPLETED (7) Remove the code for the AsyncTask and initialize the AsyncTaskLoader
+        getSupportLoaderManager().initLoader(WEATHER_LOADER_ID, null, this);
     }
 
     // COMPLETED (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
