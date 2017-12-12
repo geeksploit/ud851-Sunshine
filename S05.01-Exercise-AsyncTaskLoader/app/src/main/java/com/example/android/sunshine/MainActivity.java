@@ -122,11 +122,24 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
     }
 
     // COMPLETED (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
-    // TODO (3) Cache the weather data in a member variable and deliver it in onStartLoading.
+    // COMPLETED (3) Cache the weather data in a member variable and deliver it in onStartLoading.
     @SuppressLint("StaticFieldLeak")
     @Override
     public Loader<String[]> onCreateLoader(int id, final Bundle args) {
         return new AsyncTaskLoader<String[]>(this) {
+
+            private String[] mCacheWeatherData;
+
+            @Override
+            protected void onStartLoading() {
+                if (mCacheWeatherData == null) {
+                    mLoadingIndicator.setVisibility(View.VISIBLE);
+                    forceLoad();
+                } else {
+                    deliverResult(mCacheWeatherData);
+                }
+            }
+
             @Override
             public String[] loadInBackground() {
                 String locationQueryString = SunshinePreferences.getPreferredWeatherLocation(MainActivity.this);
@@ -141,6 +154,12 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
                     e.printStackTrace();
                     return null;
                 }
+            }
+
+            @Override
+            public void deliverResult(String[] data) {
+                mCacheWeatherData = data;
+                super.deliverResult(data);
             }
         };
     }
