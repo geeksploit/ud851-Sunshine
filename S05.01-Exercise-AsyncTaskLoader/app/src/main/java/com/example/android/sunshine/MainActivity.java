@@ -15,12 +15,14 @@
  */
 package com.example.android.sunshine;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -38,6 +40,9 @@ import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.net.URL;
 
 // COMPLETED (1) Implement the proper LoaderCallbacks interface and the methods of that interface
@@ -116,11 +121,28 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         new FetchWeatherTask().execute(location);
     }
 
-    // TODO (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
+    // COMPLETED (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
     // TODO (3) Cache the weather data in a member variable and deliver it in onStartLoading.
+    @SuppressLint("StaticFieldLeak")
     @Override
     public Loader<String[]> onCreateLoader(int id, final Bundle args) {
-        return null;
+        return new AsyncTaskLoader<String[]>(this) {
+            @Override
+            public String[] loadInBackground() {
+                String locationQueryString = SunshinePreferences.getPreferredWeatherLocation(MainActivity.this);
+                URL locationQueryUrl = NetworkUtils.buildUrl(locationQueryString);
+
+                try {
+                    String jsonWeatherResponse = NetworkUtils.getResponseFromHttpUrl(locationQueryUrl);
+                    String[] simpleJsonWeatherData = OpenWeatherJsonUtils
+                            .getSimpleWeatherStringsFromJson(MainActivity.this, jsonWeatherResponse);
+                    return simpleJsonWeatherData;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            }
+        };
     }
 
     // TODO (4) When the load is finished, show either the data or an error message if there is no data
