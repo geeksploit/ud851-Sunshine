@@ -40,7 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // TODO (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
 
-        // TODO (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
+        // COMPLETED (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
 
         // Do step 9 within onCreatePreference
         // TODO (9) Set the preference summary on each preference that isn't a CheckBoxPreference
