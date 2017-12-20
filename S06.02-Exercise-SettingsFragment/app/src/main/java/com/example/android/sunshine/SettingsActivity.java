@@ -36,7 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
         // COMPLETED (4) Create SettingsFragment and extend PreferenceFragmentCompat
 
         // Do steps 5 - 11 within SettingsFragment
-        // TODO (10) Implement OnSharedPreferenceChangeListener from SettingsFragment
+        // COMPLETED (10) Implement OnSharedPreferenceChangeListener from SettingsFragment
 
         // COMPLETED (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
 
