@@ -278,10 +278,7 @@ public class MainActivity extends AppCompatActivity implements
      */
     private void openLocationInMap() {
         // COMPLETED (9) Use preferred location rather than a default location to display in the map
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String locationKey = getString(R.string.pref_location_key);
-        String locationDefault = getString(R.string.pref_location_default);
-        String addressString = sharedPreferences.getString(locationKey, locationDefault);
+        String addressString = SunshinePreferences.getPreferredWeatherLocation(this);
         Uri geoLocation = Uri.parse("geo:0,0?q=" + addressString);
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
