@@ -33,7 +33,7 @@ public class SettingsActivity extends AppCompatActivity {
         // COMPLETED (2) Create an xml resource directory
         // COMPLETED (3) Add a PreferenceScreen with an EditTextPreference and ListPreference within the newly created xml resource directory
 
-        // TODO (4) Create SettingsFragment and extend PreferenceFragmentCompat
+        // COMPLETED (4) Create SettingsFragment and extend PreferenceFragmentCompat
 
         // Do steps 5 - 11 within SettingsFragment
         // TODO (10) Implement OnSharedPreferenceChangeListener from SettingsFragment
