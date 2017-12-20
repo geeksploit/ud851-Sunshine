@@ -343,7 +343,13 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    // TODO (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
+    // COMPLETED (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
