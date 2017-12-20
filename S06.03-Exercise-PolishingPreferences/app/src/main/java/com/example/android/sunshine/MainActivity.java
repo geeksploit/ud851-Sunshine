@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements
 
     private static final int FORECAST_LOADER_ID = 0;
 
-    // TODO (4) Add a private static boolean flag for preference updates and initialize it to false
+    // COMPLETED (4) Add a private static boolean flag for preference updates and initialize it to false
+    private static boolean PREFERENCES_HAVE_BEEN_UPDATED = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
