@@ -45,7 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
         // Do step 9 within onCreatePreference
         // COMPLETED (9) Set the preference summary on each preference that isn't a CheckBoxPreference
 
-        // TODO (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
+        // COMPLETED (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
 
         // COMPLETED (12) Register SettingsFragment (this) as a SharedPreferenceChangedListener in onStart
 
