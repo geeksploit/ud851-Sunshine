@@ -56,4 +56,11 @@ public class SettingsFragment extends PreferenceFragmentCompat
         String value = sharedPreferences.getString(key, "");
         setPreferenceSummary(preference, value);
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        getPreferenceScreen().getSharedPreferences()
+                .registerOnSharedPreferenceChangeListener(this);
+    }
 }
