@@ -1,5 +1,6 @@
 package com.example.android.sunshine;
 
+import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.support.v7.preference.CheckBoxPreference;
@@ -44,5 +45,15 @@ public class SettingsFragment extends PreferenceFragmentCompat
         } else {
             preference.setSummary(stringValue);
         }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        Preference preference = findPreference(key);
+        if (preference == null) return;
+        if (preference instanceof CheckBoxPreference) return;
+
+        String value = sharedPreferences.getString(key, "");
+        setPreferenceSummary(preference, value);
     }
 }
