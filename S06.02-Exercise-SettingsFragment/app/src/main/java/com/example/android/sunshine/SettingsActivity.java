@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
         // Do steps 5 - 11 within SettingsFragment
         // TODO (10) Implement OnSharedPreferenceChangeListener from SettingsFragment
 
-        // TODO (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
+        // COMPLETED (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
 
         // COMPLETED (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
 
