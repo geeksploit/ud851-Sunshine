@@ -43,7 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
         // COMPLETED (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
 
         // Do step 9 within onCreatePreference
-        // TODO (9) Set the preference summary on each preference that isn't a CheckBoxPreference
+        // COMPLETED (9) Set the preference summary on each preference that isn't a CheckBoxPreference
 
         // TODO (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
 
