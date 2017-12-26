@@ -15,6 +15,7 @@
  */
 package com.example.android.sunshine.data;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
@@ -29,7 +30,10 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
 //  COMPLETED (13) Create a private static final int called DATABASE_VERSION and set it to 1
     private static final int DATABASE_VERSION = 1;
 
-//  TODO (14) Create a constructor that accepts a context and call through to the superclass constructor
+//  COMPLETED (14) Create a constructor that accepts a context and call through to the superclass constructor
+    public WeatherDbHelper (Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
 
 //  TODO (15) Override onCreate and create the weather table from within it
 
