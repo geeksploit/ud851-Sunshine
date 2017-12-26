@@ -16,6 +16,7 @@
 package com.example.android.sunshine.data;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
@@ -35,7 +36,22 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-//  TODO (15) Override onCreate and create the weather table from within it
+//  COMPLETED (15) Override onCreate and create the weather table from within it
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        final String SQL_QUERY_CREATE_WEATHER_TABLE = "CREATE TABLE " +
+                WeatherContract.WeatherEntry.TABLE_NAME + " ( " +
+                WeatherContract.WeatherEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                WeatherContract.WeatherEntry.COLUMN_DATE + " INTEGER, " +
+                WeatherContract.WeatherEntry.COLUMN_DEGREES + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_HUMIDITY + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_MAX_TEMPERATURE + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_MIN_TEMPERATURE + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_PRESSURE + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_WEATHER_ID + " INTEGER, " +
+                WeatherContract.WeatherEntry.COLUMN_WIND_SPEED + " REAL " + ");";
+        db.execSQL(SQL_QUERY_CREATE_WEATHER_TABLE);
+    }
 
 //  TODO (16) Override onUpgrade, but don't do anything within it yet
 }
