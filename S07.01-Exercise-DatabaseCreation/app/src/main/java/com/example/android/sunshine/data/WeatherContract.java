@@ -28,7 +28,8 @@ public class WeatherContract {
 
 //      Do steps 2 through 10 within the WeatherEntry class
 
-//      TODO (2) Create a public static final String call TABLE_NAME with the value "weather"
+//      COMPLETED (2) Create a public static final String call TABLE_NAME with the value "weather"
+        public static final String TABLE_NAME = "weather";
 
 //      TODO (3) Create a public static final String call COLUMN_DATE with the value "date"
 
