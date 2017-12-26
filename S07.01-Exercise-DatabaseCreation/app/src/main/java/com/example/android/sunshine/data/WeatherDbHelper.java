@@ -23,7 +23,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 // COMPLETED (11) Extend SQLiteOpenHelper from WeatherDbHelper
 public class WeatherDbHelper extends SQLiteOpenHelper {
 
-//  TODO (12) Create a public static final String called DATABASE_NAME with value "weather.db"
+//  COMPLETED (12) Create a public static final String called DATABASE_NAME with value "weather.db"
+    public static final String DATABASE_NAME = "weather.db";
 
 //  TODO (13) Create a private static final int called DATABASE_VERSION and set it to 1
 
