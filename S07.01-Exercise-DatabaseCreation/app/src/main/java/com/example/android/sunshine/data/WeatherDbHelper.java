@@ -53,5 +53,8 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_QUERY_CREATE_WEATHER_TABLE);
     }
 
-//  TODO (16) Override onUpgrade, but don't do anything within it yet
+//  COMPLETED (16) Override onUpgrade, but don't do anything within it yet
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    }
 }
