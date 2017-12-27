@@ -85,9 +85,9 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
                 WeatherEntry.COLUMN_PRESSURE   + " REAL NOT NULL, "                    +
 
                 WeatherEntry.COLUMN_WIND_SPEED + " REAL NOT NULL, "                    +
-                WeatherEntry.COLUMN_DEGREES    + " REAL NOT NULL" + ");";
-
-//              TODO (1) Add a UNIQUE constraint on the date column to replace on conflict
+                WeatherEntry.COLUMN_DEGREES    + " REAL NOT NULL, " +
+//              COMPLETED (1) Add a UNIQUE constraint on the date column to replace on conflict
+                "UNIQUE (" + WeatherEntry.COLUMN_DATE + ") ON CONFLICT REPLACE);";
 
         /*
          * After we've spelled out our SQLite table creation statement above, we actually execute
