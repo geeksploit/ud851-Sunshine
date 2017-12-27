@@ -45,8 +45,8 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
                 WeatherContract.WeatherEntry.COLUMN_DATE + " INTEGER, " +
                 WeatherContract.WeatherEntry.COLUMN_DEGREES + " REAL, " +
                 WeatherContract.WeatherEntry.COLUMN_HUMIDITY + " REAL, " +
-                WeatherContract.WeatherEntry.COLUMN_MAX_TEMPERATURE + " REAL, " +
-                WeatherContract.WeatherEntry.COLUMN_MIN_TEMPERATURE + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_MAX_TEMP + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_MIN_TEMP + " REAL, " +
                 WeatherContract.WeatherEntry.COLUMN_PRESSURE + " REAL, " +
                 WeatherContract.WeatherEntry.COLUMN_WEATHER_ID + " INTEGER, " +
                 WeatherContract.WeatherEntry.COLUMN_WIND_SPEED + " REAL " + ");";
