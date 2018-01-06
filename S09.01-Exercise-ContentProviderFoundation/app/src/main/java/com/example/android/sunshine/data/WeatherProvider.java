@@ -56,7 +56,7 @@ public class WeatherProvider extends ContentProvider {
         return uriMatcher;
     }
 
-//  TODO (1) Implement onCreate
+//  COMPLETED (1) Implement onCreate
     @Override
     public boolean onCreate() {
 //      COMPLETED (2) Within onCreate, instantiate our mOpenHelper
