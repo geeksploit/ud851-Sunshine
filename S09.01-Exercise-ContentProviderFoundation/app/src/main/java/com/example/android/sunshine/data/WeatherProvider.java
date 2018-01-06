@@ -39,7 +39,8 @@ public class WeatherProvider extends ContentProvider {
     private static final int CODE_WEATHER = 100;
     private static final int CODE_WEATHER_WITH_DATE = 101;
 
-//  TODO (7) Instantiate a static UriMatcher using the buildUriMatcher method
+//  COMPLETED (7) Instantiate a static UriMatcher using the buildUriMatcher method
+    public static UriMatcher sUriMatcher = buildUriMatcher();
 
     WeatherDbHelper mOpenHelper;
 
