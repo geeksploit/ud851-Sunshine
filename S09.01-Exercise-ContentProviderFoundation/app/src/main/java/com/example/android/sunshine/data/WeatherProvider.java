@@ -18,6 +18,7 @@ package com.example.android.sunshine.data;
 import android.annotation.TargetApi;
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -42,7 +43,17 @@ public class WeatherProvider extends ContentProvider {
 
     WeatherDbHelper mOpenHelper;
 
-//  TODO (6) Write a method called buildUriMatcher where you match URI's to their numeric ID
+//  COMPLETED (6) Write a method called buildUriMatcher where you match URI's to their numeric ID
+    private static UriMatcher buildUriMatcher() {
+        String authority = WeatherContract.CONTENT_AUTHORITY;
+        String weatherPath = WeatherContract.WeatherEntry.CONTENT_URI.toString();
+
+        UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+        uriMatcher.addURI(authority, weatherPath, CODE_WEATHER);
+        uriMatcher.addURI(authority, weatherPath + "/#", CODE_WEATHER_WITH_DATE);
+
+        return uriMatcher;
+    }
 
 //  TODO (1) Implement onCreate
     @Override
