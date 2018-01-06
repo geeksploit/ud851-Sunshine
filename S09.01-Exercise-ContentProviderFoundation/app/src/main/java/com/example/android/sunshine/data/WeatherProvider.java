@@ -45,7 +45,8 @@ public class WeatherProvider extends ContentProvider {
 //  TODO (1) Implement onCreate
     @Override
     public boolean onCreate() {
-//      TODO (2) Within onCreate, instantiate our mOpenHelper
+//      COMPLETED (2) Within onCreate, instantiate our mOpenHelper
+        mOpenHelper = new WeatherDbHelper(getContext());
 
 //      TODO (3) Return true from onCreate to signify success performing setup
         return false;
