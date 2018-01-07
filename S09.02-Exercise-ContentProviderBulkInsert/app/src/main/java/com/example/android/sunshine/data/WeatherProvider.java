@@ -128,7 +128,7 @@ public class WeatherProvider extends ContentProvider {
         return true;
     }
 
-//  TODO (1) Implement the bulkInsert method
+//  COMPLETED (1) Implement the bulkInsert method
     /**
      * Handles requests to insert a set of new rows. In Sunshine, we are only going to be
      * inserting multiple rows of data at a time from a weather forecast. There is no use case
