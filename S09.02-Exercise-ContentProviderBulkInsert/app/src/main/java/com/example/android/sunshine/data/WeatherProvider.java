@@ -144,18 +144,25 @@ public class WeatherProvider extends ContentProvider {
         switch (sUriMatcher.match(uri)) {
 //          COMPLETED (2) Only perform our implementation of bulkInsert if the URI matches the CODE_WEATHER code
             case CODE_WEATHER:
+                int insertedRows = 0;
                 SQLiteDatabase db = mOpenHelper.getWritableDatabase();
                 db.beginTransaction();
                 try {
                     for (ContentValues value : values) {
                         long id = db.insert(TABLE_NAME, null, value);
+                        if (id != -1) {
+                            insertedRows++;
+                        }
                     }
                     db.setTransactionSuccessful();
                 } finally {
                     db.endTransaction();
                 }
-                break;
-//              TODO (3) Return the number of rows inserted from our implementation of bulkInsert
+//              COMPLETED (3) Return the number of rows inserted from our implementation of bulkInsert
+                if (insertedRows > 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+                return insertedRows;
 
 //          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
         }
