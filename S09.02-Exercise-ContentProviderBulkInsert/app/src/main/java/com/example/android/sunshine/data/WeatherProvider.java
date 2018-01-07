@@ -164,7 +164,9 @@ public class WeatherProvider extends ContentProvider {
                 }
                 return insertedRows;
 
-//          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
+//          COMPLETED (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
+            default:
+                return super.bulkInsert(uri, values);
         }
     }
 
