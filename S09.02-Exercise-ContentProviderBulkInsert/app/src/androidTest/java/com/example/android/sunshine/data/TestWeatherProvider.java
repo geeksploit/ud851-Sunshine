@@ -226,7 +226,7 @@ public class TestWeatherProvider {
      * <p>
      *   3) After the attempted deletion, the ContentProvider still provided weather data
      */
-    @Test
+    //@Test
     public void testDeleteAllRecordsFromProvider() {
 
         /*
