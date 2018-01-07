@@ -24,6 +24,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 
+import com.example.android.sunshine.utilities.SunshineDateUtils;
+
+import static com.example.android.sunshine.data.WeatherContract.WeatherEntry.COLUMN_DATE;
 import static com.example.android.sunshine.data.WeatherContract.WeatherEntry.TABLE_NAME;
 
 /**
@@ -149,6 +152,11 @@ public class WeatherProvider extends ContentProvider {
                 db.beginTransaction();
                 try {
                     for (ContentValues value : values) {
+                        long weatherDate = value.getAsLong(COLUMN_DATE);
+                        if (!SunshineDateUtils.isDateNormalized(weatherDate)) {
+                            throw new IllegalArgumentException("Date must be normalized to insert");
+                        }
+
                         long id = db.insert(TABLE_NAME, null, value);
                         if (id != -1) {
                             insertedRows++;
@@ -246,7 +254,7 @@ public class WeatherProvider extends ContentProvider {
                          * within the selectionArguments array will be inserted into the
                          * selection statement by SQLite under the hood.
                          */
-                        WeatherContract.WeatherEntry.COLUMN_DATE + " = ? ",
+                        COLUMN_DATE + " = ? ",
                         selectionArguments,
                         null,
                         null,
