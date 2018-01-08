@@ -320,7 +320,8 @@ public class WeatherProvider extends ContentProvider {
             getContext().getContentResolver().notifyChange(uri, null);
         }
 
-//      TODO (3) Return the number of rows deleted
+//      COMPLETED (3) Return the number of rows deleted
+        return rowsDeleted;
     }
 
     /**
