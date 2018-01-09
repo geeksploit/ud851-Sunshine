@@ -304,11 +304,24 @@ public class WeatherProvider extends ContentProvider {
      */
     @Override
     public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
-        throw new RuntimeException("Student, you need to implement the delete method!");
 
-//          TODO (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
+        int rowsDeleted;
+        switch (sUriMatcher.match(uri)) {
+//          COMPLETED (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
+            case CODE_WEATHER:
+                SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+                rowsDeleted = db.delete(WeatherContract.WeatherEntry.TABLE_NAME, "1", null);
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown URI: " + uri);
+        }
 
-//      TODO (3) Return the number of rows deleted
+        if (rowsDeleted > 0) {
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
+
+//      COMPLETED (3) Return the number of rows deleted
+        return rowsDeleted;
     }
 
     /**
