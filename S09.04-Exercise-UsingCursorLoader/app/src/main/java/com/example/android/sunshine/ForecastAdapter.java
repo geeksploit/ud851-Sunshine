@@ -30,7 +30,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
 
     //  TODO (14) Remove the mWeatherData declaration and the setWeatherData method
     private String[] mWeatherData;
-    //  TODO (1) Declare a private final Context field called mContext
+    // COMPLETED (1) Declare a private final Context field called mContext
+    private final Context mContext;
 
     /*
      * Below, we've defined an interface to handle clicks on items within this Adapter. In the
