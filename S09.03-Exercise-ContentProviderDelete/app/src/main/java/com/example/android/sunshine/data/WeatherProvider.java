@@ -310,7 +310,7 @@ public class WeatherProvider extends ContentProvider {
 //          COMPLETED (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
             case CODE_WEATHER:
                 SQLiteDatabase db = mOpenHelper.getWritableDatabase();
-                rowsDeleted = db.delete(WeatherContract.WeatherEntry.TABLE_NAME, null, null);
+                rowsDeleted = db.delete(WeatherContract.WeatherEntry.TABLE_NAME, "1", null);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
