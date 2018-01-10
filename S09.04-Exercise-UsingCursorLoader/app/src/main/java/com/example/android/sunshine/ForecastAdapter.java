@@ -145,8 +145,11 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         notifyDataSetChanged();
     }
 
-//  TODO (11) Create a new method that allows you to swap Cursors.
+    // COMPLETED (11) Create a new method that allows you to swap Cursors.
+    void swapCursor(Cursor newCursor) {
+        mCursor = newCursor;
 //      TODO (12) After the new Cursor is set, call notifyDataSetChanged
+    }
 
     /**
      * A ViewHolder is a required part of the pattern for RecyclerViews. It mostly behaves as
