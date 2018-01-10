@@ -37,10 +37,6 @@ import android.widget.TextView;
 import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
 import com.example.android.sunshine.utilities.FakeDataUtils;
-import com.example.android.sunshine.utilities.NetworkUtils;
-import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
-
-import java.net.URL;
 
 
 public class MainActivity extends AppCompatActivity implements
@@ -210,39 +206,13 @@ public class MainActivity extends AppCompatActivity implements
     public Loader<String[]> onCreateLoader(int id, final Bundle loaderArgs) {
 
         // COMPLETED (23) Remove the onStartLoading method declaration
-//      TODO (24) Remove the loadInBackground method declaration
+        // COMPLETED (24) Remove the loadInBackground method declaration
 //      TODO (25) Remove the deliverResult method declaration
 //          TODO (22) If the loader requested is our forecast loader, return the appropriate CursorLoader
         return new AsyncTaskLoader<String[]>(this) {
 
             /* This String array will hold and help cache our weather data */
             String[] mWeatherData = null;
-
-            /**
-             * This is the method of the AsyncTaskLoader that will load and parse the JSON data
-             * from OpenWeatherMap in the background.
-             *
-             * @return Weather data from OpenWeatherMap as an array of Strings.
-             *         null if an error occurs
-             */
-            @Override
-            public String[] loadInBackground() {
-
-                URL weatherRequestUrl = NetworkUtils.getUrl(MainActivity.this);
-
-                try {
-                    String jsonWeatherResponse = NetworkUtils
-                            .getResponseFromHttpUrl(weatherRequestUrl);
-
-                    String[] simpleJsonWeatherData = OpenWeatherJsonUtils
-                            .getSimpleWeatherStringsFromJson(MainActivity.this, jsonWeatherResponse);
-
-                    return simpleJsonWeatherData;
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return null;
-                }
-            }
 
             /**
              * Sends the result of the load to the registered listener.
