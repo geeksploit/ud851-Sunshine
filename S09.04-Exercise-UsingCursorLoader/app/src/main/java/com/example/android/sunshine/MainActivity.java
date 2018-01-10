@@ -207,22 +207,12 @@ public class MainActivity extends AppCompatActivity implements
 
         // COMPLETED (23) Remove the onStartLoading method declaration
         // COMPLETED (24) Remove the loadInBackground method declaration
-//      TODO (25) Remove the deliverResult method declaration
+        // COMPLETED (25) Remove the deliverResult method declaration
 //          TODO (22) If the loader requested is our forecast loader, return the appropriate CursorLoader
         return new AsyncTaskLoader<String[]>(this) {
 
             /* This String array will hold and help cache our weather data */
             String[] mWeatherData = null;
-
-            /**
-             * Sends the result of the load to the registered listener.
-             *
-             * @param data The result of the load
-             */
-            public void deliverResult(String[] data) {
-                mWeatherData = data;
-                super.deliverResult(data);
-            }
         };
     }
 
