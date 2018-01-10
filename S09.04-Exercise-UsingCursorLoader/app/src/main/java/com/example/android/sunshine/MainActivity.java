@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public Loader<String[]> onCreateLoader(int id, final Bundle loaderArgs) {
 
-//      TODO (23) Remove the onStartLoading method declaration
+        // COMPLETED (23) Remove the onStartLoading method declaration
 //      TODO (24) Remove the loadInBackground method declaration
 //      TODO (25) Remove the deliverResult method declaration
 //          TODO (22) If the loader requested is our forecast loader, return the appropriate CursorLoader
@@ -217,19 +217,6 @@ public class MainActivity extends AppCompatActivity implements
 
             /* This String array will hold and help cache our weather data */
             String[] mWeatherData = null;
-
-            /**
-             * Subclasses of AsyncTaskLoader must implement this to take care of loading their data.
-             */
-            @Override
-            protected void onStartLoading() {
-                if (mWeatherData != null) {
-                    deliverResult(mWeatherData);
-                } else {
-                    mLoadingIndicator.setVisibility(View.VISIBLE);
-                    forceLoad();
-                }
-            }
 
             /**
              * This is the method of the AsyncTaskLoader that will load and parse the JSON data
