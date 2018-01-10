@@ -112,7 +112,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         String highAndLow = SunshineWeatherUtils.formatHighLows(mContext, high, low);
         String weatherSummary = String.format(Locale.getDefault(),
                 "%s - %s - %s", date, description, highAndLow);
-//      TODO (8) Display the summary that you created above
+        // COMPLETED (8) Display the summary that you created above
+        forecastAdapterViewHolder.weatherSummary.setText(weatherSummary);
     }
 
     /**
