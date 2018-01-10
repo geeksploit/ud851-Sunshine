@@ -17,6 +17,7 @@ package com.example.android.sunshine;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
@@ -44,9 +45,9 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements
         // COMPLETED (15) Remove the implements declaration for SharedPreferences change listener and methods
-//      TODO (20) Implement LoaderCallbacks<Cursor> instead of String[]
+        // COMPLETED (20) Implement LoaderCallbacks<Cursor> instead of String[]
         ForecastAdapter.ForecastAdapterOnClickHandler,
-        LoaderManager.LoaderCallbacks<String[]> {
+        LoaderManager.LoaderCallbacks<Cursor> {
 
     private final String TAG = MainActivity.class.getSimpleName();
 
