@@ -21,7 +21,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
-import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -193,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-//  TODO (21) Refactor onCreateLoader to return a Loader<Cursor>, not Loader<String[]>
+    // COMPLETED (21) Refactor onCreateLoader to return a Loader<Cursor>, not Loader<String[]>
     /**
      * Instantiate and return a new Loader for the given ID.
      *
@@ -203,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements
      * @return Return a new Loader instance that is ready to start loading.
      */
     @Override
-    public Loader<String[]> onCreateLoader(int id, final Bundle loaderArgs) {
+    public Loader<Cursor> onCreateLoader(int id, final Bundle loaderArgs) {
 
         // COMPLETED (23) Remove the onStartLoading method declaration
         // COMPLETED (24) Remove the loadInBackground method declaration
