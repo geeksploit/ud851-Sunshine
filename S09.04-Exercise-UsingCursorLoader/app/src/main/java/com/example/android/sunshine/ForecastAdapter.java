@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.sunshine.utilities.SunshineDateUtils;
 import com.example.android.sunshine.utilities.SunshineWeatherUtils;
 
 import java.util.Locale;
@@ -104,7 +105,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         // COMPLETED (6) Move the cursor to the appropriate position
         mCursor.moveToPosition(position);
         // COMPLETED (7) Generate a weather summary with the date, description, high and low
-        String date = mCursor.getString(MainActivity.INDEX_WEATHER_DATE);
+        long dateMillis = mCursor.getLong(MainActivity.INDEX_WEATHER_DATE);
+        String date = SunshineDateUtils.getFriendlyDateString(mContext, dateMillis, false);
         int weatherId = mCursor.getInt(MainActivity.INDEX_WEATHER_ID);
         String description = SunshineWeatherUtils.getStringForWeatherCondition(mContext, weatherId);
         Double high = mCursor.getDouble(MainActivity.INDEX_WEATHER_MAX_TEMP);
