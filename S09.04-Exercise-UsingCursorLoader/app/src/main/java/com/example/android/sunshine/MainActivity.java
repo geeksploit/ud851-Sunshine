@@ -263,11 +263,12 @@ public class MainActivity extends AppCompatActivity implements
      */
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-//      TODO (32) Call mForecastAdapter's swapCursor method and pass in null
+        // COMPLETED (32) Call mForecastAdapter's swapCursor method and pass in null
         /*
          * Since this Loader's data is now invalid, we need to clear the Adapter that is
          * displaying the data.
          */
+        mForecastAdapter.swapCursor(null);
     }
 
     /**
