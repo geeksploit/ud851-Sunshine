@@ -125,7 +125,12 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
     @Override
     public int getItemCount() {
         // COMPLETED (9) Delete the current body of getItemCount
-//      TODO (10) If mCursor is null, return 0. Otherwise, return the count of mCursor
+        // COMPLETED (10) If mCursor is null, return 0. Otherwise, return the count of mCursor
+        if (mCursor == null) {
+            return 0;
+        } else {
+            return mCursor.getCount();
+        }
     }
 
     /**
