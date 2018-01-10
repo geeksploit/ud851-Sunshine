@@ -105,9 +105,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         mCursor.moveToPosition(position);
         // COMPLETED (7) Generate a weather summary with the date, description, high and low
         String date = mCursor.getString(MainActivity.INDEX_WEATHER_DATE);
-        String description = mCursor.getString(MainActivity.INDEX_WEATHER_DESCRIPTION);
-        Double high = mCursor.getDouble(MainActivity.INDEX_WEATHER_HIGHEST_TEMPERATURE);
-        Double low = mCursor.getDouble(MainActivity.INDEX_WEATHER_LOWEST_TEMPERATURE);
+        int weatherId = mCursor.getInt(MainActivity.INDEX_WEATHER_ID);
+        String description = SunshineWeatherUtils.getStringForWeatherCondition(mContext, weatherId);
+        Double high = mCursor.getDouble(MainActivity.INDEX_WEATHER_MAX_TEMP);
+        Double low = mCursor.getDouble(MainActivity.INDEX_WEATHER_MIN_TEMP);
         String highAndLow = SunshineWeatherUtils.formatHighLows(mContext, high, low);
         String weatherSummary = String.format(Locale.getDefault(),
                 "%s - %s - %s", date, description, highAndLow);
