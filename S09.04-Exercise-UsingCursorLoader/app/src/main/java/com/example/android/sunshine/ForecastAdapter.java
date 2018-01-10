@@ -16,6 +16,7 @@
 package com.example.android.sunshine;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,8 +49,9 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         void onClick(String weatherForDay);
     }
 
-//  TODO (2) Declare a private Cursor field called mCursor
+    // COMPLETED (2) Declare a private Cursor field called mCursor
 //  TODO (3) Add a Context field to the constructor and store that context in mContext
+    private Cursor mCursor;
 
     /**
      * Creates a ForecastAdapter.
