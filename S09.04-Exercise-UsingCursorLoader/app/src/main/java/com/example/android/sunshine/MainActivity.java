@@ -17,14 +17,12 @@ package com.example.android.sunshine;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -44,11 +42,10 @@ import java.net.URL;
 
 
 public class MainActivity extends AppCompatActivity implements
-//      TODO (15) Remove the implements declaration for SharedPreferences change listener and methods
+        // COMPLETED (15) Remove the implements declaration for SharedPreferences change listener and methods
 //      TODO (20) Implement LoaderCallbacks<Cursor> instead of String[]
         ForecastAdapter.ForecastAdapterOnClickHandler,
-        LoaderManager.LoaderCallbacks<String[]>,
-        SharedPreferences.OnSharedPreferenceChangeListener {
+        LoaderManager.LoaderCallbacks<String[]> {
 
     private final String TAG = MainActivity.class.getSimpleName();
 
@@ -159,15 +156,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
 
-//      TODO (19) Remove the statement that registers Mainactivity as a preference change listener
-        Log.d(TAG, "onCreate: registering preference changed listener");
-        /*
-         * Register MainActivity as an OnPreferenceChangedListener to receive a callback when a
-         * SharedPreference has changed. Please note that we must unregister MainActivity as an
-         * OnSharedPreferenceChanged listener in onDestroy to avoid any memory leaks.
-         */
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .registerOnSharedPreferenceChangeListener(this);
+//      COMPLETED (19) Remove the statement that registers Mainactivity as a preference change listener
     }
 
     /**
@@ -395,20 +384,5 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-        /*
-         * Set this flag to true so that when control returns to MainActivity, it can refresh the
-         * data.
-         *
-         * This isn't the ideal solution because there really isn't a need to perform another
-         * GET request just to change the units, but this is the simplest solution that gets the
-         * job done for now. Later in this course, we are going to show you more elegant ways to
-         * handle converting the units from celsius to fahrenheit and back without hitting the
-         * network again by keeping a copy of the data in a manageable format.
-         */
-        PREFERENCES_HAVE_BEEN_UPDATED = true;
     }
 }
