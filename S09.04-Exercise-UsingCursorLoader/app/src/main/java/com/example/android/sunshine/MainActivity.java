@@ -32,7 +32,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
@@ -61,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements
     public static final int INDEX_WEATHER_MAX_TEMP = 2;
     public static final int INDEX_WEATHER_MIN_TEMP = 3;
 
-//  TODO (37) Remove the error TextView
-    private TextView mErrorMessageDisplay;
+    // COMPLETED (37) Remove the error TextView
 
     /*
      * This ID will be used to identify the Loader responsible for loading our weather forecast. In
@@ -97,9 +95,7 @@ public class MainActivity extends AppCompatActivity implements
          */
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_forecast);
 
-//      TODO (36) Remove the findViewById call for the error TextView
-        /* This TextView is used to display errors and will be hidden if there are no errors */
-        mErrorMessageDisplay = (TextView) findViewById(R.id.tv_error_message_display);
+        // COMPLETED (36) Remove the findViewById call for the error TextView
 
         /*
          * The ProgressBar that will indicate to the user that we are loading data. It will be
