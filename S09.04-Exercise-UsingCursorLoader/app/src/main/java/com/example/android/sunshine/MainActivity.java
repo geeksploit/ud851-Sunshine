@@ -58,7 +58,11 @@ public class MainActivity extends AppCompatActivity implements
         WeatherContract.WeatherEntry.COLUMN_MIN_TEMP
     };
 
-//  TODO (17) Create constant int values representing each column name's position above
+    // COMPLETED (17) Create constant int values representing each column name's position above
+    public static final int INDEX_WEATHER_ID = 0;
+    public static final int INDEX_WEATHER_DATE = 1;
+    public static final int INDEX_WEATHER_MAX_TEMP = 2;
+    public static final int INDEX_WEATHER_MIN_TEMP = 3;
 
 //  TODO (37) Remove the error TextView
     private TextView mErrorMessageDisplay;
