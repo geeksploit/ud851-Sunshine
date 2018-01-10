@@ -21,6 +21,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -207,12 +208,21 @@ public class MainActivity extends AppCompatActivity implements
         // COMPLETED (23) Remove the onStartLoading method declaration
         // COMPLETED (24) Remove the loadInBackground method declaration
         // COMPLETED (25) Remove the deliverResult method declaration
-//          TODO (22) If the loader requested is our forecast loader, return the appropriate CursorLoader
-        return new AsyncTaskLoader<String[]>(this) {
-
-            /* This String array will hold and help cache our weather data */
-            String[] mWeatherData = null;
-        };
+        switch (id) {
+            // COMPLETED (22) If the loader requested is our forecast loader, return the appropriate CursorLoader
+            case ID_FORECAST_LOADER:
+                Uri forecastQueryUri = WeatherContract.WeatherEntry.CONTENT_URI;
+                String selection = WeatherContract.WeatherEntry.getSqlSelectForTodayOnwards();
+                String sortOrder = WeatherContract.WeatherEntry.COLUMN_DATE;
+                return new CursorLoader(this,
+                        forecastQueryUri,
+                        MAIN_FORECAST_PROJECTION,
+                        selection,
+                        null,
+                        sortOrder);
+            default:
+                throw new UnsupportedOperationException("Unknown loader ID: " + id);
+        }
     }
 
 //  TODO (26) Change onLoadFinished parameter to a Loader<Cursor> instead of a Loader<String[]>
