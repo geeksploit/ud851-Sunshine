@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private ProgressBar mLoadingIndicator;
 
-    //  TODO (35) Remove the preference change flag
-    private static boolean PREFERENCES_HAVE_BEEN_UPDATED = false;
+    // COMPLETED (35) Remove the preference change flag
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
