@@ -244,7 +244,9 @@ public class MainActivity extends AppCompatActivity implements
             mPosition = 0;
         }
 
-        //      TODO (30) Smooth scroll the RecyclerView to mPosition
+        // COMPLETED (30) Smooth scroll the RecyclerView to mPosition
+        mRecyclerView.smoothScrollToPosition(mPosition);
+
         //      TODO (31) If the Cursor's size is not equal to 0, call showWeatherDataView
     }
 
