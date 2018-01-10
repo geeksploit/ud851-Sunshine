@@ -23,6 +23,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.sunshine.utilities.SunshineWeatherUtils;
+
+import java.util.Locale;
+
 /**
  * {@link ForecastAdapter} exposes a list of weather forecasts
  * from a {@link android.database.Cursor} to a {@link android.support.v7.widget.RecyclerView}.
@@ -100,7 +104,14 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         // COMPLETED (5) Delete the current body of onBindViewHolder
         // COMPLETED (6) Move the cursor to the appropriate position
         mCursor.moveToPosition(position);
-//      TODO (7) Generate a weather summary with the date, description, high and low
+        // COMPLETED (7) Generate a weather summary with the date, description, high and low
+        String date = mCursor.getString(MainActivity.INDEX_WEATHER_DATE);
+        String description = mCursor.getString(MainActivity.INDEX_WEATHER_DESCRIPTION);
+        Double high = mCursor.getDouble(MainActivity.INDEX_WEATHER_HIGHEST_TEMPERATURE);
+        Double low = mCursor.getDouble(MainActivity.INDEX_WEATHER_LOWEST_TEMPERATURE);
+        String highAndLow = SunshineWeatherUtils.formatHighLows(mContext, high, low);
+        String weatherSummary = String.format(Locale.getDefault(),
+                "%s - %s - %s", date, description, highAndLow);
 //      TODO (8) Display the summary that you created above
     }
 
