@@ -283,7 +283,6 @@ public class MainActivity extends AppCompatActivity implements
         //      TODO (30) Smooth scroll the RecyclerView to mPosition
         //      TODO (31) If the Cursor's size is not equal to 0, call showWeatherDataView
         mLoadingIndicator.setVisibility(View.INVISIBLE);
-        mForecastAdapter.setWeatherData(data);
         if (null == data) {
             showErrorMessage();
         } else {

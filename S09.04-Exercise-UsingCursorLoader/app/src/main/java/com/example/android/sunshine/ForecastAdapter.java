@@ -33,8 +33,7 @@ import java.util.Locale;
  */
 class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder> {
 
-    //  TODO (14) Remove the mWeatherData declaration and the setWeatherData method
-    private String[] mWeatherData;
+    // COMPLETED (14) Remove the mWeatherData declaration and the setWeatherData method
     // COMPLETED (1) Declare a private final Context field called mContext
     private final Context mContext;
 
@@ -131,18 +130,6 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         } else {
             return mCursor.getCount();
         }
-    }
-
-    /**
-     * This method is used to set the weather forecast on a ForecastAdapter if we've already
-     * created one. This is handy when we get new data from the web but don't want to create a
-     * new ForecastAdapter to display it.
-     *
-     * @param weatherData The new weather data to be displayed.
-     */
-    public void setWeatherData(String[] weatherData) {
-        mWeatherData = weatherData;
-        notifyDataSetChanged();
     }
 
     // COMPLETED (11) Create a new method that allows you to swap Cursors.
