@@ -184,8 +184,18 @@ public class DetailActivity extends AppCompatActivity implements
     // COMPLETED (22) Override onCreateLoader
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        // TODO (23) If the loader requested is our detail loader, return the appropriate CursorLoader
-        return null;
+        // COMPLETED (23) If the loader requested is our detail loader, return the appropriate CursorLoader
+        switch (id) {
+            case DETAIL_WEATHER_LOADER:
+                return new CursorLoader(this,
+                        mUri,
+                        DETAIL_WEATHER_PROJECTION,
+                        null,
+                        null,
+                        WeatherContract.WeatherEntry.COLUMN_DATE);
+            default:
+                throw new UnsupportedOperationException("Unknown loader ID: " + id);
+        }
     }
 
 //  TODO (24) Override onLoadFinished
