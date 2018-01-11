@@ -66,8 +66,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-//      TODO (12) Remove mWeatherDisplay TextView
-        mWeatherDisplay = (TextView) findViewById(R.id.tv_display_weather);
+        // COMPLETED (12) Remove mWeatherDisplay TextView
 //      TODO (13) Find each of the TextViews by ID
 
 //      TODO (14) Remove the code that checks for extra text
