@@ -22,7 +22,12 @@
     android:padding="8dp">
 
     <!-- COMPLETED (2) Remove the tv_display_weather TextView -->
-    <!-- TODO (3) Add a TextView for the selected day's date -->
+    <!-- COMPLETED (3) Add a TextView for the selected day's date -->
+    <TextView
+        android:id="@+id/tv_weather_day_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!-- TODO (4) Add a TextView for the selected day's weather description -->
     <!-- TODO (5) Add a TextView for the selected day's high temperature -->
     <!-- TODO (6) Add a TextView for the selected day's low temperature -->
