@@ -53,7 +53,15 @@ public class DetailActivity extends AppCompatActivity {
             WeatherContract.WeatherEntry.COLUMN_PRESSURE
     };
 
-//  TODO (19) Create constant int values representing each column name's position above
+    // COMPLETED (19) Create constant int values representing each column name's position above
+    public static final int INDEX_WEATHER_DATE = 0;
+    public static final int INDEX_WEATHER_ID = 1;
+    public static final int INDEX_WEATHER_MAX_TEMP = 2;
+    public static final int INDEX_WEATHER_MIN_TEMP = 3;
+    public static final int INDEX_WEATHER_HUMIDITY = 4;
+    public static final int INDEX_WEATHER_WIND_SPEED = 5;
+    public static final int INDEX_WEATHER_PRESSURE = 6;
+
 //  TODO (20) Create a constant int to identify our loader used in DetailActivity
 
     /* A summary of the forecast that can be shared by clicking the share button in the ActionBar */
