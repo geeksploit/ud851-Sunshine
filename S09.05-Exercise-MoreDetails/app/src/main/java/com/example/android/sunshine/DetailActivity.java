@@ -252,6 +252,8 @@ public class DetailActivity extends AppCompatActivity implements
     }
 
 
-//  TODO (34) Override onLoaderReset, but don't do anything in it yet
-
+    // COMPLETED (34) Override onLoaderReset, but don't do anything in it yet
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+    }
 }
