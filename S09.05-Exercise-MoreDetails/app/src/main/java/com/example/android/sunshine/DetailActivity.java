@@ -198,7 +198,9 @@ public class DetailActivity extends AppCompatActivity implements
         }
     }
 
-//  TODO (24) Override onLoadFinished
+    // COMPLETED (24) Override onLoadFinished
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
 //      TODO (25) Check before doing anything that the Cursor has valid data
 //      TODO (26) Display a readable data string
 //      TODO (27) Display the weather description (using SunshineWeatherUtils)
@@ -208,6 +210,7 @@ public class DetailActivity extends AppCompatActivity implements
 //      TODO (31) Display the wind speed and direction
 //      TODO (32) Display the pressure
 //      TODO (33) Store a forecast summary in mForecastSummary
+    }
 
 
 //  TODO (34) Override onLoaderReset, but don't do anything in it yet
