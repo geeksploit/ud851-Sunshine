@@ -215,7 +215,11 @@ public class DetailActivity extends AppCompatActivity implements
                 SunshineWeatherUtils.getStringForWeatherCondition(this, weatherId);
         mWeatherDescription.setText(weatherDescription);
 
-//      TODO (28) Display the high temperature
+        // COMPLETED (28) Display the high temperature
+        Double highTemperature = data.getDouble(INDEX_WEATHER_MAX_TEMP);
+        String weatherHigh = SunshineWeatherUtils.formatTemperature(this, highTemperature);
+        mWeatherHigh.setText(weatherHigh);
+
 //      TODO (29) Display the low temperature
 //      TODO (30) Display the humidity
 //      TODO (31) Display the wind speed and direction
