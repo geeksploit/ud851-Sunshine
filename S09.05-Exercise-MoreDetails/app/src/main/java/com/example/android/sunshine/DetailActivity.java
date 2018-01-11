@@ -181,8 +181,12 @@ public class DetailActivity extends AppCompatActivity implements
         return shareIntent;
     }
 
-//  TODO (22) Override onCreateLoader
-//          TODO (23) If the loader requested is our detail loader, return the appropriate CursorLoader
+    // COMPLETED (22) Override onCreateLoader
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        // TODO (23) If the loader requested is our detail loader, return the appropriate CursorLoader
+        return null;
+    }
 
 //  TODO (24) Override onLoadFinished
 //      TODO (25) Check before doing anything that the Cursor has valid data
