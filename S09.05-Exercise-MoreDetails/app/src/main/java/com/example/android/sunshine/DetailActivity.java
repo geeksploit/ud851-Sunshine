@@ -204,7 +204,11 @@ public class DetailActivity extends AppCompatActivity implements
         // COMPLETED (25) Check before doing anything that the Cursor has valid data
         if (data == null) return;
 
-//      TODO (26) Display a readable data string
+        // COMPLETED (26) Display a readable data string
+        long dateMillis = data.getLong(INDEX_WEATHER_DATE);
+        String dateString = SunshineDateUtils.getFriendlyDateString(this, dateMillis, false);
+        mWeatherDate.setText(dateString);
+
 //      TODO (27) Display the weather description (using SunshineWeatherUtils)
 //      TODO (28) Display the high temperature
 //      TODO (29) Display the low temperature
