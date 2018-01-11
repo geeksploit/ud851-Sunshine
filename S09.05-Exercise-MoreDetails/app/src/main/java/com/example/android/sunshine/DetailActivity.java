@@ -206,6 +206,7 @@ public class DetailActivity extends AppCompatActivity implements
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         // COMPLETED (25) Check before doing anything that the Cursor has valid data
         if (data == null) return;
+        if (!data.moveToFirst()) return;
 
         // COMPLETED (26) Display a readable data string
         long dateMillis = data.getLong(INDEX_WEATHER_DATE);
