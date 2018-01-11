@@ -77,14 +77,8 @@ public class DetailActivity extends AppCompatActivity {
         mWeatherWind = (TextView) findViewById(R.id.tv_weather_day_wind);
         mWeatherPressure = (TextView) findViewById(R.id.tv_weather_day_pressure);
 
-//      TODO (14) Remove the code that checks for extra text
-        Intent intentThatStartedThisActivity = getIntent();
-        if (intentThatStartedThisActivity != null) {
-            if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
-                mForecastSummary = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT);
-                mWeatherDisplay.setText(mForecastSummary);
-            }
-        }
+        // COMPLETED (14) Remove the code that checks for extra text
+
 //      TODO (16) Use getData to get a reference to the URI passed with this Activity's Intent
 //      TODO (17) Throw a NullPointerException if that URI is null
 //      TODO (35) Initialize the loader for DetailActivity
