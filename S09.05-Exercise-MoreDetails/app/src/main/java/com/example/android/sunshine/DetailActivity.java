@@ -232,7 +232,13 @@ public class DetailActivity extends AppCompatActivity implements
         String humidityString = humidity.intValue() + " %";
         mWeatherHumidity.setText(humidityString);
 
-//      TODO (31) Display the wind speed and direction
+        // COMPLETED (31) Display the wind speed and direction
+        Float windSpeed = data.getFloat(INDEX_WEATHER_WIND_SPEED);
+        Float windDirection = data.getFloat(INDEX_WEATHER_WIND_DEGREES);
+        String windString =
+                SunshineWeatherUtils.getFormattedWind(this, windSpeed, windDirection);
+        mWeatherWind.setText(windString);
+
 //      TODO (32) Display the pressure
 //      TODO (33) Store a forecast summary in mForecastSummary
     }
