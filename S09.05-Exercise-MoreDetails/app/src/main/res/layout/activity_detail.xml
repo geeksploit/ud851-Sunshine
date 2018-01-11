@@ -58,6 +58,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!-- TODO (9) Add a TextView for the selected day's wind -->
+    <!-- COMPLETED (9) Add a TextView for the selected day's wind -->
+    <TextView
+        android:id="@+id/tv_weather_day_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
