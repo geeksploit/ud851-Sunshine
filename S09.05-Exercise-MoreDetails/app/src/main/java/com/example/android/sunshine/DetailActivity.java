@@ -209,7 +209,12 @@ public class DetailActivity extends AppCompatActivity implements
         String dateString = SunshineDateUtils.getFriendlyDateString(this, dateMillis, false);
         mWeatherDate.setText(dateString);
 
-//      TODO (27) Display the weather description (using SunshineWeatherUtils)
+        // COMPLETED (27) Display the weather description (using SunshineWeatherUtils)
+        int weatherId = data.getInt(INDEX_WEATHER_ID);
+        String weatherDescription =
+                SunshineWeatherUtils.getStringForWeatherCondition(this, weatherId);
+        mWeatherDescription.setText(weatherDescription);
+
 //      TODO (28) Display the high temperature
 //      TODO (29) Display the low temperature
 //      TODO (30) Display the humidity
