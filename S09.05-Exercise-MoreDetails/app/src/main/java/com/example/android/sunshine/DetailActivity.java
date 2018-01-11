@@ -244,7 +244,11 @@ public class DetailActivity extends AppCompatActivity implements
         String pressureString = pressure.intValue() + " hPa";
         mWeatherPressure.setText(pressureString);
 
-//      TODO (33) Store a forecast summary in mForecastSummary
+        // COMPLETED (33) Store a forecast summary in mForecastSummary
+        String temperatureString =
+                SunshineWeatherUtils.formatHighLows(this, highTemperature, lowTemperature);
+        mForecastSummary = String.format("%s - %s - %s",
+                dateString, weatherDescription, temperatureString);
     }
 
 
