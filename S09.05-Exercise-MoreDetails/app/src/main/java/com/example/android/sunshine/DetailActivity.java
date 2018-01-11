@@ -231,7 +231,7 @@ public class DetailActivity extends AppCompatActivity implements
 
         // COMPLETED (30) Display the humidity
         Double humidity = data.getDouble(INDEX_WEATHER_HUMIDITY);
-        String humidityString = humidity.intValue() + " %";
+        String humidityString = getString(R.string.format_humidity, humidity);
         mWeatherHumidity.setText(humidityString);
 
         // COMPLETED (31) Display the wind speed and direction
