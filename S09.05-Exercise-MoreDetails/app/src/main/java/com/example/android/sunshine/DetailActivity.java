@@ -243,7 +243,7 @@ public class DetailActivity extends AppCompatActivity implements
 
         // COMPLETED (32) Display the pressure
         Double pressure = data.getDouble(INDEX_WEATHER_PRESSURE);
-        String pressureString = pressure.intValue() + " hPa";
+        String pressureString = getString(R.string.format_pressure, pressure);
         mWeatherPressure.setText(pressureString);
 
         // COMPLETED (33) Store a forecast summary in mForecastSummary
