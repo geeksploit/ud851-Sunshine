@@ -67,7 +67,15 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         // COMPLETED (12) Remove mWeatherDisplay TextView
-//      TODO (13) Find each of the TextViews by ID
+
+        // COMPLETED (13) Find each of the TextViews by ID
+        mWeatherDate = (TextView) findViewById(R.id.tv_weather_day_date);
+        mWeatherDescription = (TextView) findViewById(R.id.tv_weather_day_description);
+        mWeatherHigh = (TextView) findViewById(R.id.tv_weather_day_high_temperature);
+        mWeatherLow = (TextView) findViewById(R.id.tv_weather_day_low_temperature);
+        mWeatherHumidity = (TextView) findViewById(R.id.tv_weather_day_humidity);
+        mWeatherWind = (TextView) findViewById(R.id.tv_weather_day_wind);
+        mWeatherPressure = (TextView) findViewById(R.id.tv_weather_day_pressure);
 
 //      TODO (14) Remove the code that checks for extra text
         Intent intentThatStartedThisActivity = getIntent();
