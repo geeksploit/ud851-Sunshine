@@ -80,7 +80,12 @@ public class DetailActivity extends AppCompatActivity {
 
         // COMPLETED (14) Remove the code that checks for extra text
 
-//      TODO (16) Use getData to get a reference to the URI passed with this Activity's Intent
+        // COMPLETED (16) Use getData to get a reference to the URI passed with this Activity's Intent
+        Intent intentThatStartedThisActivity = getIntent();
+        if (intentThatStartedThisActivity != null) {
+            mUri = intentThatStartedThisActivity.getData();
+        }
+
 //      TODO (17) Throw a NullPointerException if that URI is null
 //      TODO (35) Initialize the loader for DetailActivity
     }
