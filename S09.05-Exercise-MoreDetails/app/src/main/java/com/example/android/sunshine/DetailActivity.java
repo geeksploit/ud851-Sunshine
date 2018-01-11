@@ -195,7 +195,7 @@ public class DetailActivity extends AppCompatActivity implements
                         DETAIL_WEATHER_PROJECTION,
                         null,
                         null,
-                        WeatherContract.WeatherEntry.COLUMN_DATE);
+                        null);
             default:
                 throw new UnsupportedOperationException("Unknown loader ID: " + id);
         }
