@@ -51,6 +51,7 @@ public class DetailActivity extends AppCompatActivity implements
             WeatherContract.WeatherEntry.COLUMN_MIN_TEMP,
             WeatherContract.WeatherEntry.COLUMN_HUMIDITY,
             WeatherContract.WeatherEntry.COLUMN_WIND_SPEED,
+            WeatherContract.WeatherEntry.COLUMN_DEGREES,
             WeatherContract.WeatherEntry.COLUMN_PRESSURE
     };
 
@@ -61,7 +62,8 @@ public class DetailActivity extends AppCompatActivity implements
     public static final int INDEX_WEATHER_MIN_TEMP = 3;
     public static final int INDEX_WEATHER_HUMIDITY = 4;
     public static final int INDEX_WEATHER_WIND_SPEED = 5;
-    public static final int INDEX_WEATHER_PRESSURE = 6;
+    public static final int INDEX_WEATHER_WIND_DEGREES = 6;
+    public static final int INDEX_WEATHER_PRESSURE = 7;
 
     // COMPLETED (20) Create a constant int to identify our loader used in DetailActivity
     public static final int DETAIL_WEATHER_LOADER = 42;
