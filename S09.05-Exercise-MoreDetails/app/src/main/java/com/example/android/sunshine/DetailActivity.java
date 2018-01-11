@@ -86,7 +86,11 @@ public class DetailActivity extends AppCompatActivity {
             mUri = intentThatStartedThisActivity.getData();
         }
 
-//      TODO (17) Throw a NullPointerException if that URI is null
+        // COMPLETED (17) Throw a NullPointerException if that URI is null
+        if (mUri == null) {
+            throw new NullPointerException("The Uri shall not be null");
+        }
+
 //      TODO (35) Initialize the loader for DetailActivity
     }
 
