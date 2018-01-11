@@ -113,7 +113,8 @@ public class DetailActivity extends AppCompatActivity implements
             throw new NullPointerException("The Uri shall not be null");
         }
 
-//      TODO (35) Initialize the loader for DetailActivity
+        // COMPLETED (35) Initialize the loader for DetailActivity
+        getSupportLoaderManager().initLoader(DETAIL_WEATHER_LOADER, null, this);
     }
 
     /**
