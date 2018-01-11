@@ -14,11 +14,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<!-- TODO (1) Change the FrameLayout to a vertical LinearLayout -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- COMPLETED (1) Change the FrameLayout to a vertical LinearLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="8dp">
 
     <!-- TODO (2) Remove the tv_display_weather TextView -->
@@ -37,5 +38,4 @@
     <!-- TODO (8) Add a TextView for the selected day's pressure -->
     <!-- TODO (9) Add a TextView for the selected day's wind -->
 
-</FrameLayout>
-
+</LinearLayout>
