@@ -28,7 +28,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!-- TODO (4) Add a TextView for the selected day's weather description -->
+    <!-- COMPLETED (4) Add a TextView for the selected day's weather description -->
+    <TextView
+        android:id="@+id/tv_weather_day_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!-- TODO (5) Add a TextView for the selected day's high temperature -->
     <!-- TODO (6) Add a TextView for the selected day's low temperature -->
     <!-- TODO (7) Add a TextView for the selected day's humidity -->
