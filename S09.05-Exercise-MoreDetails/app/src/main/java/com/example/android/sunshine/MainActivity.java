@@ -266,11 +266,12 @@ public class MainActivity extends AppCompatActivity implements
      */
     @Override
     public void onClick(Long weatherForDay) {
-//      TODO (39) Refactor onClick to build a URI for the clicked date and and pass it with the Intent using setData
+        // COMPLETED (39) Refactor onClick to build a URI for the clicked date and and pass it with the Intent using setData
         Context context = this;
         Class destinationClass = DetailActivity.class;
+        Uri weatherWithDate = WeatherContract.WeatherEntry.buildWeatherUriWithDate(weatherForDay);
         Intent intentToStartDetailActivity = new Intent(context, destinationClass);
-        intentToStartDetailActivity.putExtra(Intent.EXTRA_TEXT, weatherForDay);
+        intentToStartDetailActivity.setData(weatherWithDate);
         startActivity(intentToStartDetailActivity);
     }
 
