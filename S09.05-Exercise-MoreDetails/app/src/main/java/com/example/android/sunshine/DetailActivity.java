@@ -225,7 +225,11 @@ public class DetailActivity extends AppCompatActivity implements
         String weatherLow = SunshineWeatherUtils.formatTemperature(this, lowTemperature);
         mWeatherLow.setText(weatherLow);
 
-//      TODO (30) Display the humidity
+        // COMPLETED (30) Display the humidity
+        Double humidity = data.getDouble(INDEX_WEATHER_HUMIDITY);
+        String humidityString = humidity.intValue() + " %";
+        mWeatherHumidity.setText(humidityString);
+
 //      TODO (31) Display the wind speed and direction
 //      TODO (32) Display the pressure
 //      TODO (33) Store a forecast summary in mForecastSummary
