@@ -53,7 +53,14 @@ public class DetailActivity extends AppCompatActivity {
 
     // COMPLETED (10) Remove the mWeatherDisplay TextView declaration
 
-//  TODO (11) Declare TextViews for the date, description, high, low, humidity, wind, and pressure
+    // COMPLETED (11) Declare TextViews for the date, description, high, low, humidity, wind, and pressure
+    private TextView mWeatherDate;
+    private TextView mWeatherDescription;
+    private TextView mWeatherHigh;
+    private TextView mWeatherLow;
+    private TextView mWeatherHumidity;
+    private TextView mWeatherWind;
+    private TextView mWeatherPressure;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
