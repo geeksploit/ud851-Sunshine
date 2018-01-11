@@ -210,7 +210,7 @@ public class DetailActivity extends AppCompatActivity implements
 
         // COMPLETED (26) Display a readable data string
         long dateMillis = data.getLong(INDEX_WEATHER_DATE);
-        String dateString = SunshineDateUtils.getFriendlyDateString(this, dateMillis, false);
+        String dateString = SunshineDateUtils.getFriendlyDateString(this, dateMillis, true);
         mWeatherDate.setText(dateString);
 
         // COMPLETED (27) Display the weather description (using SunshineWeatherUtils)
