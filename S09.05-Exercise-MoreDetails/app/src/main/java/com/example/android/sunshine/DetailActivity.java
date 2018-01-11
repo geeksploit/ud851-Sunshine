@@ -51,8 +51,7 @@ public class DetailActivity extends AppCompatActivity {
 
 //  TODO (15) Declare a private Uri field called mUri
 
-//  TODO (10) Remove the mWeatherDisplay TextView declaration
-    private TextView mWeatherDisplay;
+    // COMPLETED (10) Remove the mWeatherDisplay TextView declaration
 
 //  TODO (11) Declare TextViews for the date, description, high, low, humidity, wind, and pressure
 
