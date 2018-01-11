@@ -239,7 +239,11 @@ public class DetailActivity extends AppCompatActivity implements
                 SunshineWeatherUtils.getFormattedWind(this, windSpeed, windDirection);
         mWeatherWind.setText(windString);
 
-//      TODO (32) Display the pressure
+        // COMPLETED (32) Display the pressure
+        Double pressure = data.getDouble(INDEX_WEATHER_PRESSURE);
+        String pressureString = pressure.intValue() + " hPa";
+        mWeatherPressure.setText(pressureString);
+
 //      TODO (33) Store a forecast summary in mForecastSummary
     }
 
