@@ -62,7 +62,8 @@ public class DetailActivity extends AppCompatActivity {
     public static final int INDEX_WEATHER_WIND_SPEED = 5;
     public static final int INDEX_WEATHER_PRESSURE = 6;
 
-//  TODO (20) Create a constant int to identify our loader used in DetailActivity
+    // COMPLETED (20) Create a constant int to identify our loader used in DetailActivity
+    public static final int DETAIL_WEATHER_LOADER = 42;
 
     /* A summary of the forecast that can be shared by clicking the share button in the ActionBar */
     private String mForecastSummary;
