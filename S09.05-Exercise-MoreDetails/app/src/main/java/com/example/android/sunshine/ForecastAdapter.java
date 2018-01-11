@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.sunshine.data.WeatherContract;
 import com.example.android.sunshine.utilities.SunshineDateUtils;
 import com.example.android.sunshine.utilities.SunshineWeatherUtils;
 
@@ -177,9 +178,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
          */
         @Override
         public void onClick(View v) {
-//          TODO (37) Instead of passing the String for the clicked item, pass the date from the cursor
-            String weatherForDay = weatherSummary.getText().toString();
-            mClickHandler.onClick(weatherForDay);
+            // COMPLETED (37) Instead of passing the String for the clicked item, pass the date from the cursor
+            int dateColumn = mCursor.getColumnIndex(WeatherContract.WeatherEntry.COLUMN_DATE);
+            long dateMillis = mCursor.getLong(dateColumn);
+            mClickHandler.onClick(dateMillis);
         }
     }
 }
