@@ -49,7 +49,8 @@ public class DetailActivity extends AppCompatActivity {
     /* A summary of the forecast that can be shared by clicking the share button in the ActionBar */
     private String mForecastSummary;
 
-//  TODO (15) Declare a private Uri field called mUri
+    // COMPLETED (15) Declare a private Uri field called mUri
+    private Uri mUri;
 
     // COMPLETED (10) Remove the mWeatherDisplay TextView declaration
 
