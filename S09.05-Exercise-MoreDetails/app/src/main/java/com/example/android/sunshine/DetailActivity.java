@@ -201,7 +201,9 @@ public class DetailActivity extends AppCompatActivity implements
     // COMPLETED (24) Override onLoadFinished
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-//      TODO (25) Check before doing anything that the Cursor has valid data
+        // COMPLETED (25) Check before doing anything that the Cursor has valid data
+        if (data == null) return;
+
 //      TODO (26) Display a readable data string
 //      TODO (27) Display the weather description (using SunshineWeatherUtils)
 //      TODO (28) Display the high temperature
