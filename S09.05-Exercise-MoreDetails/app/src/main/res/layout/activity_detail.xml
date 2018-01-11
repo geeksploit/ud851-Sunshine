@@ -40,7 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!-- TODO (6) Add a TextView for the selected day's low temperature -->
+    <!-- COMPLETED (6) Add a TextView for the selected day's low temperature -->
+    <TextView
+        android:id="@+id/tv_weather_day_low_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!-- TODO (7) Add a TextView for the selected day's humidity -->
     <!-- TODO (8) Add a TextView for the selected day's pressure -->
     <!-- TODO (9) Add a TextView for the selected day's wind -->
