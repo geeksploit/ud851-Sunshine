@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 
 // COMPLETED (5) Create a new class called SunshineSyncIntentService that extends IntentService
-class SunshineSyncIntentService extends IntentService {
+public class SunshineSyncIntentService extends IntentService {
     // COMPLETED (6) Create a constructor that calls super and passes the name of this class
     public SunshineSyncIntentService() {
         super(SunshineSyncIntentService.class.getName());
