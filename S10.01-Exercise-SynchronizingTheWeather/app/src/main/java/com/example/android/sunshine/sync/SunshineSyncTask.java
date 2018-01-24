@@ -1,8 +1,10 @@
 package com.example.android.sunshine.sync;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 
+import com.example.android.sunshine.data.WeatherContract;
 import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
@@ -23,7 +25,17 @@ class SunshineSyncTask {
                     OpenWeatherJsonUtils.getWeatherContentValuesFromJson(context, weatherResponse);
             if (weatherValues == null || weatherValues.length == 0) return;
 
-//      TODO (4) If we have valid results, delete the old data and insert the new
+            // COMPLETED (4) If we have valid results, delete the old data and insert the new
+            ContentResolver contentResolver = context.getContentResolver();
+            contentResolver.delete(
+                    WeatherContract.WeatherEntry.CONTENT_URI,
+                    null,
+                    null
+            );
+            contentResolver.bulkInsert(
+                    WeatherContract.WeatherEntry.CONTENT_URI,
+                    weatherValues
+            );
 
         } catch (IOException e) {
             e.printStackTrace();
