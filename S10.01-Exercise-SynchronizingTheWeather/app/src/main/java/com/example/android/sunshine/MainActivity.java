@@ -34,6 +34,7 @@ import android.widget.ProgressBar;
 
 import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
+import com.example.android.sunshine.sync.SunshineSyncUtils;
 
 public class MainActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor>,
@@ -153,8 +154,8 @@ public class MainActivity extends AppCompatActivity implements
          */
         getSupportLoaderManager().initLoader(ID_FORECAST_LOADER, null, this);
 
-        //  TODO (13) Call SunshineSyncUtils's startImmediateSync method
-
+        // COMPLETED (13) Call SunshineSyncUtils's startImmediateSync method
+        SunshineSyncUtils.startImmediateSync(this);
     }
 
     /**
