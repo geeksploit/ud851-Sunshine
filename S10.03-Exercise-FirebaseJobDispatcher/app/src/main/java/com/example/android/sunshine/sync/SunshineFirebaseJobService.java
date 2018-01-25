@@ -30,7 +30,7 @@ class SunshineFirebaseJobService extends JobService {
 
     // COMPLETED(5) Override onStartJob and within it, spawn off a separate ASyncTask to sync weather data
     @Override
-    public boolean onStartJob(JobParameters job) {
+    public boolean onStartJob(final JobParameters job) {
         mFetchWeatherTask = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {
@@ -38,7 +38,13 @@ class SunshineFirebaseJobService extends JobService {
                 SunshineSyncTask.syncWeather(context);
                 return null;
             }
-//              TODO (6) Once the weather data is sync'd, call jobFinished with the appropriate arguments
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                // COMPLETED (6) Once the weather data is sync'd, call jobFinished with the appropriate arguments
+                jobFinished(job, false);
+            }
+
         };
         return false;
     }
