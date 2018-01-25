@@ -25,11 +25,13 @@ public class SunshineSyncUtils {
     // COMPLETED (1) Declare a private static boolean field called sInitialized
     private static boolean sInitialized;
 
-    //  TODO (2) Create a synchronized public static void method called initialize
+    // COMPLETED (2) Create a synchronized public static void method called initialize
+    public static synchronized void initialize(Context context) {
     //  TODO (3) Only execute this method body if sInitialized is false
     //  TODO (4) If the method body is executed, set sInitialized to true
     //  TODO (5) Check to see if our weather ContentProvider is empty
         //  TODO (6) If it is empty or we have a null Cursor, sync the weather now!
+    }
 
     /**
      * Helper method to perform a sync immediately using an IntentService for asynchronous
