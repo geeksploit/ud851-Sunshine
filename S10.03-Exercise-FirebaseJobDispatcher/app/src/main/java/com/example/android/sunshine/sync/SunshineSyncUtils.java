@@ -22,6 +22,13 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 
 import com.example.android.sunshine.data.WeatherContract;
+import com.firebase.jobdispatcher.Constraint;
+import com.firebase.jobdispatcher.Driver;
+import com.firebase.jobdispatcher.FirebaseJobDispatcher;
+import com.firebase.jobdispatcher.GooglePlayDriver;
+import com.firebase.jobdispatcher.Job;
+import com.firebase.jobdispatcher.Lifetime;
+import com.firebase.jobdispatcher.Trigger;
 
 import java.util.concurrent.TimeUnit;
 
@@ -37,7 +44,25 @@ public class SunshineSyncUtils {
     // COMPLETED (11) Add a sync tag to identify our sync job
     private static final String SYNC_TAG = SunshineSyncUtils.class.getName();
 
-//  TODO (12) Create a method to schedule our periodic weather sync
+    // COMPLETED (12) Create a method to schedule our periodic weather sync
+    static void schedulePeriodicWeatherSync(Context context) {
+        Driver driver = new GooglePlayDriver(context);
+        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(driver);
+
+        Job weatherSyncJob = dispatcher.newJobBuilder()
+                .setService(SunshineFirebaseJobService.class)
+                .setTag(SYNC_TAG)
+                .setConstraints(Constraint.ON_ANY_NETWORK)
+                .setLifetime(Lifetime.FOREVER)
+                .setRecurring(true)
+                .setTrigger(Trigger.executionWindow(
+                        SYNC_INTERVAL_SECONDS,
+                        SYNC_INTERVAL_SECONDS + SYNC_FLEXTIME_SECONDS))
+                .setReplaceCurrent(true)
+                .build();
+
+        dispatcher.schedule(weatherSyncJob);
+    }
 
     /**
      * Creates periodic sync tasks and checks to see if an immediate sync is required. If an
