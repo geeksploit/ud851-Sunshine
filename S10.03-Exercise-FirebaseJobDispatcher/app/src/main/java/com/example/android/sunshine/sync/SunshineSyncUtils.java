@@ -81,7 +81,8 @@ public class SunshineSyncUtils {
 
         sInitialized = true;
 
-//      TODO (13) Call the method you created to schedule a periodic weather sync
+        // COMPLETED (13) Call the method you created to schedule a periodic weather sync
+        schedulePeriodicWeatherSync(context);
 
         /*
          * We need to check to see if our ContentProvider has data to display in our forecast
