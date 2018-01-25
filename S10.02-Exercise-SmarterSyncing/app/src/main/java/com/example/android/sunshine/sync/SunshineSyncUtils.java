@@ -53,7 +53,10 @@ public class SunshineSyncUtils {
                         null
                 );
 
-        //  TODO (6) If it is empty or we have a null Cursor, sync the weather now!
+                // COMPLETED (6) If it is empty or we have a null Cursor, sync the weather now!
+                if (cursor == null || cursor.getCount() == 0) {
+                    SunshineSyncUtils.startImmediateSync(context);
+                }
 
                 cursor.close();
                 return null;
