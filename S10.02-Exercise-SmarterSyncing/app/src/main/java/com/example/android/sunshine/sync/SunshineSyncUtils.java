@@ -22,7 +22,8 @@ import android.support.annotation.NonNull;
 
 public class SunshineSyncUtils {
 
-//  TODO (1) Declare a private static boolean field called sInitialized
+    // COMPLETED (1) Declare a private static boolean field called sInitialized
+    private static boolean sInitialized;
 
     //  TODO (2) Create a synchronized public static void method called initialize
     //  TODO (3) Only execute this method body if sInitialized is false
