@@ -14,12 +14,16 @@
  * limitations under the License.
  */
 // COMPLETED (2) Make sure you've imported the jobdispatcher.JobService, not job.JobService
+
+import android.os.AsyncTask;
+
 import com.firebase.jobdispatcher.JobService;
 
 // COMPLETED (3) Add a class called SunshineFirebaseJobService that extends jobdispatcher.JobService
 class SunshineFirebaseJobService extends JobService {
 
-//  TODO (4) Declare an ASyncTask field called mFetchWeatherTask
+    // COMPLETED (4) Declare an ASyncTask field called mFetchWeatherTask
+    private AsyncTask<Void, Void, Void> mFetchWeatherTask;
 
 //  TODO (5) Override onStartJob and within it, spawn off a separate ASyncTask to sync weather data
 //              TODO (6) Once the weather data is sync'd, call jobFinished with the appropriate arguments
