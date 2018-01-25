@@ -1,4 +1,4 @@
-/*
+package com.example.android.sunshine.sync;/*
  * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +18,6 @@
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.example.android.sunshine.sync.SunshineSyncTask;
 import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
