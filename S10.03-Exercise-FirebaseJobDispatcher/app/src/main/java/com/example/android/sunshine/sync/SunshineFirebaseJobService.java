@@ -22,7 +22,7 @@ import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
 // COMPLETED (3) Add a class called SunshineFirebaseJobService that extends jobdispatcher.JobService
-class SunshineFirebaseJobService extends JobService {
+public class SunshineFirebaseJobService extends JobService {
 
     // COMPLETED (4) Declare an ASyncTask field called mFetchWeatherTask
     private AsyncTask<Void, Void, Void> mFetchWeatherTask;
