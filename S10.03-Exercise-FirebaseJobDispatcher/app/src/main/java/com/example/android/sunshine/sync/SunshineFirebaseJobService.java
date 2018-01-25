@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// TODO (2) Make sure you've imported the jobdispatcher.JobService, not job.JobService
+// COMPLETED (2) Make sure you've imported the jobdispatcher.JobService, not job.JobService
+import com.firebase.jobdispatcher.JobService;
 
-// TODO (3) Add a class called SunshineFirebaseJobService that extends jobdispatcher.JobService
+// COMPLETED (3) Add a class called SunshineFirebaseJobService that extends jobdispatcher.JobService
+class SunshineFirebaseJobService extends JobService {
 
 //  TODO (4) Declare an ASyncTask field called mFetchWeatherTask
 
@@ -23,3 +25,4 @@
 //              TODO (6) Once the weather data is sync'd, call jobFinished with the appropriate arguments
 
 //  TODO (7) Override onStopJob, cancel the ASyncTask if it's not null and return true
+}
