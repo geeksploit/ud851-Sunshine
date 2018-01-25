@@ -46,7 +46,9 @@ class SunshineFirebaseJobService extends JobService {
             }
 
         };
-        return false;
+
+        mFetchWeatherTask.execute();
+        return true;
     }
 
 //  TODO (7) Override onStopJob, cancel the ASyncTask if it's not null and return true
