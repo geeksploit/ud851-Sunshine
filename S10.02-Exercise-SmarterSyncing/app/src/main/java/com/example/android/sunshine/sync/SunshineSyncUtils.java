@@ -61,7 +61,7 @@ public class SunshineSyncUtils {
                 cursor.close();
                 return null;
             }
-        };
+        }.execute();
     }
 
     /**
