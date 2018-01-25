@@ -29,7 +29,8 @@ public class SunshineSyncUtils {
     public static synchronized void initialize(Context context) {
         // COMPLETED (3) Only execute this method body if sInitialized is false
         if (sInitialized) return;
-    //  TODO (4) If the method body is executed, set sInitialized to true
+        // COMPLETED (4) If the method body is executed, set sInitialized to true
+        sInitialized = true;
     //  TODO (5) Check to see if our weather ContentProvider is empty
         //  TODO (6) If it is empty or we have a null Cursor, sync the weather now!
     }
