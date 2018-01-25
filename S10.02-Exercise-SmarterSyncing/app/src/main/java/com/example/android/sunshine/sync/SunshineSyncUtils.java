@@ -17,7 +17,12 @@ package com.example.android.sunshine.sync;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+
+import com.example.android.sunshine.data.WeatherContract;
 
 
 public class SunshineSyncUtils {
@@ -26,13 +31,34 @@ public class SunshineSyncUtils {
     private static boolean sInitialized;
 
     // COMPLETED (2) Create a synchronized public static void method called initialize
-    public static synchronized void initialize(Context context) {
+    public static synchronized void initialize(final Context context) {
         // COMPLETED (3) Only execute this method body if sInitialized is false
         if (sInitialized) return;
         // COMPLETED (4) If the method body is executed, set sInitialized to true
         sInitialized = true;
-    //  TODO (5) Check to see if our weather ContentProvider is empty
+
+        // COMPLETED (5) Check to see if our weather ContentProvider is empty
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                Uri weatherQueryUri = WeatherContract.WeatherEntry.CONTENT_URI;
+                String[] singleColumnProjection = {WeatherContract.WeatherEntry._ID};
+                String selection = WeatherContract.WeatherEntry.getSqlSelectForTodayOnwards();
+
+                Cursor cursor = context.getContentResolver().query(
+                        weatherQueryUri,
+                        singleColumnProjection,
+                        selection,
+                        null,
+                        null
+                );
+
         //  TODO (6) If it is empty or we have a null Cursor, sync the weather now!
+
+                cursor.close();
+                return null;
+            }
+        };
     }
 
     /**
