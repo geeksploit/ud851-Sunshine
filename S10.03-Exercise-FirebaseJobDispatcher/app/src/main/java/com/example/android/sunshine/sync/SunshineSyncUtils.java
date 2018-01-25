@@ -23,9 +23,14 @@ import android.support.annotation.NonNull;
 
 import com.example.android.sunshine.data.WeatherContract;
 
+import java.util.concurrent.TimeUnit;
+
 public class SunshineSyncUtils {
 
-//  TODO (10) Add constant values to sync Sunshine every 3 - 4 hours
+    // COMPLETED (10) Add constant values to sync Sunshine every 3 - 4 hours
+    private static final int SYNC_INTERVAL_HOURS = 3;
+    private static final int SYNC_INTERVAL_SECONDS = (int) TimeUnit.HOURS.toSeconds(SYNC_INTERVAL_HOURS);
+    private static final int SYNC_FLEXTIME_SECONDS = SYNC_INTERVAL_SECONDS / 3;
 
     private static boolean sInitialized;
 
