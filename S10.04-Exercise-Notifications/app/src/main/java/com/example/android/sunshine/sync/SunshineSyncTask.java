@@ -18,7 +18,10 @@ package com.example.android.sunshine.sync;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
+import com.example.android.sunshine.R;
 import com.example.android.sunshine.data.WeatherContract;
 import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
@@ -73,7 +76,15 @@ public class SunshineSyncTask {
                         WeatherContract.WeatherEntry.CONTENT_URI,
                         weatherValues);
 
-//              TODO (13) Check if notifications are enabled
+                //  COMPLETED (13) Check if notifications are enabled
+                String notificationsEnabledKey = context.getString(R.string.pref_enable_notifications_key);
+                boolean notificationsEnabledDefault = context.getResources()
+                        .getBoolean(R.bool.show_notifications_by_default);
+                SharedPreferences sharedPreferences = PreferenceManager
+                        .getDefaultSharedPreferences(context);
+
+                boolean notificationsEnabled = sharedPreferences
+                        .getBoolean(notificationsEnabledKey, notificationsEnabledDefault);
 
 //              TODO (14) Check if a day has passed since the last notification
 
