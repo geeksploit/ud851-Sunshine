@@ -32,7 +32,8 @@ public class NotificationUtils {
     public static final int INDEX_MAX_TEMP = 1;
     public static final int INDEX_MIN_TEMP = 2;
 
-//  TODO (1) Create a constant int value to identify the notification
+    // COMPLETED (1) Create a constant int value to identify the notification
+    public static final int WEATHER_NOTIFICATION_ID = 42;
 
     /**
      * Constructs and displays a notification for the newly updated weather for today.
