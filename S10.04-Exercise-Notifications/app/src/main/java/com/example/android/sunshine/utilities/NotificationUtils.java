@@ -109,7 +109,8 @@ public class NotificationUtils {
             PendingIntent weatherDetailPendingIntent = taskStackBuilder
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-//          TODO (5) Set the content Intent of the NotificationBuilder
+            // COMPLETED (5) Set the content Intent of the NotificationBuilder
+            notificationBuilder.setContentIntent(weatherDetailPendingIntent);
 
 //          TODO (6) Get a reference to the NotificationManager
 
