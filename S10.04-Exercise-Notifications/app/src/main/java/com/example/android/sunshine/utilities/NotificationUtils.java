@@ -1,6 +1,7 @@
 package com.example.android.sunshine.utilities;
 
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -9,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.ContextCompat;
 
 import com.example.android.sunshine.DetailActivity;
@@ -101,7 +103,11 @@ public class NotificationUtils {
             Intent weatherDetailIntent = new Intent(context, DetailActivity.class);
             weatherDetailIntent.setData(todaysWeatherUri);
 
-//          TODO (4) Use TaskStackBuilder to create the proper PendingIntent
+            // COMPLETED (4) Use TaskStackBuilder to create the proper PendingIntent
+            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(context);
+            taskStackBuilder.addNextIntentWithParentStack(weatherDetailIntent);
+            PendingIntent weatherDetailPendingIntent = taskStackBuilder
+                    .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
 //          TODO (5) Set the content Intent of the NotificationBuilder
 
