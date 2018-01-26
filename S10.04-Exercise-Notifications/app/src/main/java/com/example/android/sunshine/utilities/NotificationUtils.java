@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 
 import com.example.android.sunshine.R;
 import com.example.android.sunshine.data.WeatherContract;
@@ -84,7 +86,14 @@ public class NotificationUtils {
             int smallArtResourceId = SunshineWeatherUtils
                     .getSmallArtResourceIdForWeatherCondition(weatherId);
 
-//          TODO (2) Use NotificationCompat.Builder to begin building the notification
+            // COMPLETED (2) Use NotificationCompat.Builder to begin building the notification
+            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context)
+                    .setColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                    .setSmallIcon(smallArtResourceId)
+                    .setLargeIcon(largeIcon)
+                    .setContentTitle(notificationTitle)
+                    .setContentText(notificationText)
+                    .setAutoCancel(true);
 
 //          TODO (3) Create an Intent with the proper URI to start the DetailActivity
 
