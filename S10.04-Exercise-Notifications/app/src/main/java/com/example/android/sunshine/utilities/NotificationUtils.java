@@ -1,6 +1,7 @@
 package com.example.android.sunshine.utilities;
 
 
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -112,7 +113,9 @@ public class NotificationUtils {
             // COMPLETED (5) Set the content Intent of the NotificationBuilder
             notificationBuilder.setContentIntent(weatherDetailPendingIntent);
 
-//          TODO (6) Get a reference to the NotificationManager
+            // COMPLETED (6) Get a reference to the NotificationManager
+            NotificationManager notificationManager = (NotificationManager)
+                    context.getSystemService(Context.NOTIFICATION_SERVICE);
 
 //          TODO (7) Notify the user with the ID WEATHER_NOTIFICATION_ID
 
