@@ -20,8 +20,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.text.format.DateUtils;
 
 import com.example.android.sunshine.R;
+import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
 import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
@@ -86,7 +88,11 @@ public class SunshineSyncTask {
                 boolean notificationsEnabled = sharedPreferences
                         .getBoolean(notificationsEnabledKey, notificationsEnabledDefault);
 
-//              TODO (14) Check if a day has passed since the last notification
+                // COMPLETED (14) Check if a day has passed since the last notification
+                long timeSinceLastNotification = SunshinePreferences
+                        .getEllapsedTimeSinceLastNotification(context);
+                boolean aDayHasPassedSinceLastNotification =
+                        timeSinceLastNotification >= DateUtils.DAY_IN_MILLIS;
 
 //              TODO (15) If more than a day have passed and notifications are enabled, notify the user
 
