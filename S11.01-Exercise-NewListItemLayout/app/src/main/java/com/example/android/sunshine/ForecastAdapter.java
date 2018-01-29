@@ -176,8 +176,12 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         ForecastAdapterViewHolder(View view) {
             super(view);
 
-//          TODO (6) Get references to all new views and delete this line
-            weatherSummary = (TextView) view.findViewById(R.id.tv_weather_data);
+            // COMPLETED (6) Get references to all new views and delete this line
+            textWeatherDate = (TextView) view.findViewById(R.id.textWeatherDate);
+            textWeatherCondition = (TextView) view.findViewById(R.id.textWeatherCondition);
+            textWeatherTemperatureMin = (TextView) view.findViewById(R.id.textWeatherTemperatureMin);
+            textWeatherTemperatureMax = (TextView) view.findViewById(R.id.textWeatherTemperatureMax);
+            imageWeatherCondition = (ImageView) view.findViewById(R.id.imageWeatherCondition);
 
             view.setOnClickListener(this);
         }
