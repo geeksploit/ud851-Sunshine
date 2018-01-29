@@ -43,7 +43,7 @@
         android:layout_marginLeft="@dimen/weather_list_item_padding"
         android:layout_marginStart="@dimen/weather_list_item_padding"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintLeft_toLeftOf="@id/imageWeatherCondition"
+        app:layout_constraintLeft_toRightOf="@id/imageWeatherCondition"
         app:layout_constraintStart_toEndOf="@id/imageWeatherCondition"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/today" />
