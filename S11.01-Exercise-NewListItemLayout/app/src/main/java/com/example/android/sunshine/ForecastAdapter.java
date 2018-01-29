@@ -120,7 +120,7 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
          /* Use the weatherId to obtain the proper description */
         int weatherId = mCursor.getInt(MainActivity.INDEX_WEATHER_CONDITION_ID);
         String description = SunshineWeatherUtils.getStringForWeatherCondition(mContext, weatherId);
-        int imageId = SunshineWeatherUtils.getLargeArtResourceIdForWeatherCondition(weatherId);
+        int imageId = SunshineWeatherUtils.getSmallArtResourceIdForWeatherCondition(weatherId);
          /* Read high temperature from the cursor (in degrees celsius) */
         double highInCelsius = mCursor.getDouble(MainActivity.INDEX_WEATHER_MAX_TEMP);
         String highTemperature = SunshineWeatherUtils.formatTemperature(mContext, highInCelsius);
