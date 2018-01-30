@@ -48,9 +48,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/primary_weather_info" />
+        <include
+            android:id="@+id/weather_primary"
+            layout="@layout/primary_weather_info" />
 
-        <include layout="@layout/extra_weather_details" />
+        <include
+            android:id="@+id/weather_extra"
+            layout="@layout/extra_weather_details" />
 
     </LinearLayout>
 
