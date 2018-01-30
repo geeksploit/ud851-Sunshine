@@ -143,14 +143,15 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         int weatherId = mCursor.getInt(MainActivity.INDEX_WEATHER_CONDITION_ID);
         int weatherImageId;
 
+        switch(forecastAdapterViewHolder.getItemViewType()) {
 //      TODO (15) If the view type of the layout is today, display a large icon
-
-//      TODO (16) If the view type of the layout is future day, display a small icon
-
+            case VIEW_TYPE_FUTURE_DAY:
+                // COMPLETED (16) If the view type of the layout is future day, display a small icon
+                weatherImageId = SunshineWeatherUtils
+                        .getSmallArtResourceIdForWeatherCondition(weatherId);
+                break;
 //      TODO (17) Otherwise, throw an IllegalArgumentException
-
-        weatherImageId = SunshineWeatherUtils
-                .getSmallArtResourceIdForWeatherCondition(weatherId);
+        }
 
         forecastAdapterViewHolder.iconView.setImageResource(weatherImageId);
 
