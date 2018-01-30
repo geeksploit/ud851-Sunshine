@@ -297,12 +297,13 @@ public class DetailActivity extends AppCompatActivity implements
          */
         String highString = SunshineWeatherUtils.formatTemperature(this, highInCelsius);
 
-//      TODO (17) Create the content description for the high temperature for a11y
+        // COMPLETED (17) Create the content description for the high temperature for a11y
+        String highA11y = getString(R.string.a11y_high_temp, highString);
 
         // COMPLETED (10) Use mDetailBinding to display the high temperature and set the content description
         /* Set the text to display the high temperature */
         mDetailBinding.weatherPrimary.temperatureHigh.setText(highString);
-        mDetailBinding.weatherPrimary.temperatureHigh.setContentDescription(highString);
+        mDetailBinding.weatherPrimary.temperatureHigh.setContentDescription(highA11y);
 
         /*************************
          * Low (min) temperature *
