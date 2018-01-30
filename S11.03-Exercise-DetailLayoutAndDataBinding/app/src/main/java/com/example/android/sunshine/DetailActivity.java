@@ -261,7 +261,6 @@ public class DetailActivity extends AppCompatActivity implements
         String dateText = SunshineDateUtils.getFriendlyDateString(this, localDateMidnightGmt, true);
 
 //      TODO (8) Use mDetailBinding to display the date
-        mDateView.setText(dateText);
 
         /***********************
          * Weather Description *
@@ -275,7 +274,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (9) Use mDetailBinding to display the description and set the content description
         /* Set the text to display the description*/
-        mDescriptionView.setText(description);
 
 //      TODO (16) Set the content description of the icon to the same as the weather description a11y text
 
@@ -295,7 +293,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (10) Use mDetailBinding to display the high temperature and set the content description
         /* Set the text to display the high temperature */
-        mHighTemperatureView.setText(highString);
 
         /*************************
          * Low (min) temperature *
@@ -313,7 +310,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (11) Use mDetailBinding to display the low temperature and set the content description
         /* Set the text to display the low temperature */
-        mLowTemperatureView.setText(lowString);
 
         /************
          * Humidity *
@@ -326,7 +322,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (12) Use mDetailBinding to display the humidity and set the content description
         /* Set the text to display the humidity */
-        mHumidityView.setText(humidityString);
 
 //      TODO (19) Set the content description of the humidity label to the humidity a11y String
 
@@ -342,7 +337,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (13) Use mDetailBinding to display the wind and set the content description
         /* Set the text to display wind information */
-        mWindView.setText(windString);
 
 //      TODO (22) Set the content description of the wind label to the wind a11y String
 
@@ -365,7 +359,6 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (14) Use mDetailBinding to display the pressure and set the content description
         /* Set the text to display the pressure information */
-        mPressureView.setText(pressureString);
 
 //      TODO (24) Set the content description of the pressure label to the pressure a11y String
 
