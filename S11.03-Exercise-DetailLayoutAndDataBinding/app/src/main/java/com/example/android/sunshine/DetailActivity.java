@@ -350,7 +350,8 @@ public class DetailActivity extends AppCompatActivity implements
         float windDirection = data.getFloat(INDEX_WEATHER_DEGREES);
         String windString = SunshineWeatherUtils.getFormattedWind(this, windSpeed, windDirection);
 
-//      TODO (21) Create the content description for the wind for a11y
+        // COMPLETED (21) Create the content description for the wind for a11y
+        String widnA11y = getString(R.string.a11y_wind, windString);
 
         // COMPLETED (13) Use mDetailBinding to display the wind and set the content description
         /* Set the text to display wind information */
