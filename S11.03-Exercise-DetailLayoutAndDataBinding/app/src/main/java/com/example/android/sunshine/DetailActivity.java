@@ -377,7 +377,8 @@ public class DetailActivity extends AppCompatActivity implements
          */
         String pressureString = getString(R.string.format_pressure, pressure);
 
-//      TODO (23) Create the content description for the pressure for a11y
+        // COMPLETED (23) Create the content description for the pressure for a11y
+        String pressureA11y = getString(R.string.a11y_pressure, pressureString);
 
         // COMPLETED (14) Use mDetailBinding to display the pressure and set the content description
         /* Set the text to display the pressure information */
