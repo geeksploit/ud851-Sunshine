@@ -356,8 +356,10 @@ public class DetailActivity extends AppCompatActivity implements
         // COMPLETED (13) Use mDetailBinding to display the wind and set the content description
         /* Set the text to display wind information */
         mDetailBinding.weatherExtra.windValue.setText(windString);
+        mDetailBinding.weatherExtra.windValue.setContentDescription(widnA11y);
 
-//      TODO (22) Set the content description of the wind label to the wind a11y String
+        // COMPLETED (22) Set the content description of the wind label to the wind a11y String
+        mDetailBinding.weatherExtra.windLabel.setContentDescription(widnA11y);
 
         /************
          * Pressure *
