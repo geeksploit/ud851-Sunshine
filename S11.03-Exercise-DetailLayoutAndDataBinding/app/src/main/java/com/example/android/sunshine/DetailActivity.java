@@ -332,14 +332,15 @@ public class DetailActivity extends AppCompatActivity implements
         float humidity = data.getFloat(INDEX_WEATHER_HUMIDITY);
         String humidityString = getString(R.string.format_humidity, humidity);
 
-//      TODO (20) Create the content description for the humidity for a11y
+        // COMPLETED (20) Create the content description for the humidity for a11y
+        String humidityA11y = getString(R.string.a11y_humidity, humidityString);
 
         // COMPLETED (12) Use mDetailBinding to display the humidity and set the content description
         /* Set the text to display the humidity */
         mDetailBinding.weatherExtra.humidityValue.setText(humidityString);
-        mDetailBinding.weatherExtra.humidityValue.setContentDescription(humidityString);
 
-//      TODO (19) Set the content description of the humidity label to the humidity a11y String
+        // COMPLETED (19) Set the content description of the humidity label to the humidity a11y String
+        mDetailBinding.weatherExtra.humidityValue.setContentDescription(humidityA11y);
 
         /****************************
          * Wind speed and direction *
