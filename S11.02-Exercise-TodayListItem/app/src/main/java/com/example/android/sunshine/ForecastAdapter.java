@@ -107,7 +107,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
                 // COMPLETED (12) If the view type of the layout is today, use today layout
                 layoutId = R.layout.forecast_list_item_today;
                 break;
-//      TODO (13) If the view type of the layout is future day, use future day layout
+            case VIEW_TYPE_FUTURE_DAY:
+                // COMPLETED (13) If the view type of the layout is future day, use future day layout
+                layoutId = R.layout.forecast_list_item;
+                break;
 //      TODO (14) Otherwise, throw an IllegalArgumentException
         }
 
