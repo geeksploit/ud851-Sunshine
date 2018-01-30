@@ -6,7 +6,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/weather_extra_details_height"
         android:padding="@dimen/default_padding">
 
         <TextView
