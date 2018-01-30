@@ -315,8 +315,10 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (18) Create the content description for the low temperature for a11y
 
-//      TODO (11) Use mDetailBinding to display the low temperature and set the content description
+        // COMPLETED (11) Use mDetailBinding to display the low temperature and set the content description
         /* Set the text to display the low temperature */
+        mDetailBinding.weatherPrimary.temperatureLow.setText(lowString);
+        mDetailBinding.weatherPrimary.temperatureLow.setContentDescription(lowString);
 
         /************
          * Humidity *
