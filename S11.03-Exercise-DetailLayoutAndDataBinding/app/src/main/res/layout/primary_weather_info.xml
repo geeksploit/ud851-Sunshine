@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,6 +36,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="@dimen/default_margin"
+            android:contentDescription="@string/a11y_forecast_icon"
             app:layout_constraintLeft_toLeftOf="@id/guideline_left"
             app:layout_constraintRight_toRightOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@id/date"
