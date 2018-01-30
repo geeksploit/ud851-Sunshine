@@ -35,7 +35,7 @@
 <!-- COMPLETED (25) Create a layout called primary_weather_info.xml -->
 <!-- COMPLETED (26) Surround the entire layout with <layout/> tags for data binding -->
 <!-- COMPLETED (27) Using ConstraintLayout, create the primary weather info layout -->
-<!-- TODO (32) Include the primary_weather_info layout -->
+<!-- COMPLETED (32) Include the primary_weather_info layout -->
 
 <!-- COMPLETED (28) Create a layout called extra_weather_details.xml -->
 <!-- COMPLETED (29) Surround the entire layout with <layout/> tags for data binding -->
@@ -47,6 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <include layout="@layout/primary_weather_info" />
 
     </LinearLayout>
 
