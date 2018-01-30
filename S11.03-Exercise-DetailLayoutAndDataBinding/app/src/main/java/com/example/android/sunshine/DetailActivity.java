@@ -371,6 +371,7 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (14) Use mDetailBinding to display the pressure and set the content description
         /* Set the text to display the pressure information */
+        mDetailBinding.weatherExtra.pressureValue.setText(pressureString);
 
 //      TODO (24) Set the content description of the pressure label to the pressure a11y String
 
