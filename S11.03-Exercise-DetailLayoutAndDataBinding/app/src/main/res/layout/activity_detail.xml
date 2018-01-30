@@ -33,7 +33,7 @@
 <!-- TODO (34) Create a LinearLayout to contain two included layouts that share equal space -->
 
 <!-- COMPLETED (25) Create a layout called primary_weather_info.xml -->
-<!-- TODO (26) Surround the entire layout with <layout/> tags for data binding -->
+<!-- COMPLETED (26) Surround the entire layout with <layout/> tags for data binding -->
 <!-- TODO (27) Using ConstraintLayout, create the primary weather info layout -->
 <!-- TODO (32) Include the primary_weather_info layout -->
 
