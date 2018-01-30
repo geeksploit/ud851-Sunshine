@@ -118,7 +118,7 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
 
         View view = LayoutInflater
                 .from(mContext)
-                .inflate(R.layout.forecast_list_item, viewGroup, false);
+                .inflate(layoutId, viewGroup, false);
 
         return new ForecastAdapterViewHolder(view);
     }
