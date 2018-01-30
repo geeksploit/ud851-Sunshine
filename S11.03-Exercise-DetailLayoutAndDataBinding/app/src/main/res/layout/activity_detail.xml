@@ -40,7 +40,7 @@
 <!-- COMPLETED (28) Create a layout called extra_weather_details.xml -->
 <!-- COMPLETED (29) Surround the entire layout with <layout/> tags for data binding -->
 <!-- COMPLETED (30) Using ConstraintLayout, create the extra weather details layout -->
-<!-- TODO (33) Include the extra_weather_details layout -->
+<!-- COMPLETED (33) Include the extra_weather_details layout -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
@@ -49,6 +49,8 @@
         android:orientation="vertical">
 
         <include layout="@layout/primary_weather_info" />
+
+        <include layout="@layout/extra_weather_details" />
 
     </LinearLayout>
 
