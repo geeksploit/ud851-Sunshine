@@ -36,6 +36,16 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:text="@string/humidity_label" />
 
+        <TextView
+            android:id="@+id/humidity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/guideline_extra_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="89 %" />
+
     </android.support.constraint.ConstraintLayout>
 
 </layout>
