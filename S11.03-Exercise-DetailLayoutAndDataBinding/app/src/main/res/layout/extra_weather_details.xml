@@ -76,6 +76,16 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:text="@string/wind_label" />
 
+        <TextView
+            android:id="@+id/wind_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/guideline_extra_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="5 km/h NE" />
+
     </android.support.constraint.ConstraintLayout>
 
 </layout>
