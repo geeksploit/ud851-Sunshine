@@ -154,7 +154,9 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
                 weatherImageId = SunshineWeatherUtils
                         .getSmallArtResourceIdForWeatherCondition(weatherId);
                 break;
-//      TODO (17) Otherwise, throw an IllegalArgumentException
+            default:
+                // COMPLETED (17) Otherwise, throw an IllegalArgumentException
+                throw new IllegalArgumentException("Unknown view type");
         }
 
         forecastAdapterViewHolder.iconView.setImageResource(weatherImageId);
