@@ -66,6 +66,16 @@
             app:layout_constraintRight_toRightOf="parent"
             tools:text="956 hPa" />
 
+        <TextView
+            android:id="@+id/wind_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/guideline_extra_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/wind_label" />
+
     </android.support.constraint.ConstraintLayout>
 
 </layout>
