@@ -221,8 +221,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         // COMPLETED (10) Within getItemViewType, if mUseTodayLayout is true and position is 0, return the ID for today viewType
         if (mUseTodayLayout && position == 0) {
             return VIEW_TYPE_TODAY;
+        } else {
+            // COMPLETED (11) Otherwise, return the ID for future day viewType
+            return VIEW_TYPE_FUTURE_DAY;
         }
-//      TODO (11) Otherwise, return the ID for future day viewType
     }
 
     /**
