@@ -218,8 +218,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
     // COMPLETED (9) Override getItemViewType
     @Override
     public int getItemViewType(int position) {
-        return super.getItemViewType(position);
-//      TODO (10) Within getItemViewType, if mUseTodayLayout is true and position is 0, return the ID for today viewType
+        // COMPLETED (10) Within getItemViewType, if mUseTodayLayout is true and position is 0, return the ID for today viewType
+        if (mUseTodayLayout && position == 0) {
+            return VIEW_TYPE_TODAY;
+        }
 //      TODO (11) Otherwise, return the ID for future day viewType
     }
 
