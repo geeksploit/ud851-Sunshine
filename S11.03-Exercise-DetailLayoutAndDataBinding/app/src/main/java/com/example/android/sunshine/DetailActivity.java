@@ -243,7 +243,9 @@ public class DetailActivity extends AppCompatActivity implements
             return;
         }
 
-//      TODO (7) Display the weather icon using mDetailBinding
+        // COMPLETED (7) Display the weather icon using mDetailBinding
+        mDetailBinding.weatherPrimary.icon.setImageResource(SunshineWeatherUtils
+                .getLargeArtResourceIdForWeatherCondition(data.getInt(INDEX_WEATHER_CONDITION_ID)));
 
         /****************
          * Weather Date *
