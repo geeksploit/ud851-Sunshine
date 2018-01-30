@@ -28,9 +28,9 @@
 
 <!-- COMPLETED (31) Delete the old layout completely -->
 
+<!-- COMPLETED (34) Create a LinearLayout to contain two included layouts that share equal space -->
 <!-- COMPLETED (35) Surround the entire layout with <layout/> tags for data binding -->
 
-<!-- TODO (34) Create a LinearLayout to contain two included layouts that share equal space -->
 
 <!-- COMPLETED (25) Create a layout called primary_weather_info.xml -->
 <!-- COMPLETED (26) Surround the entire layout with <layout/> tags for data binding -->
@@ -41,6 +41,13 @@
 <!-- COMPLETED (29) Surround the entire layout with <layout/> tags for data binding -->
 <!-- COMPLETED (30) Using ConstraintLayout, create the extra weather details layout -->
 <!-- TODO (33) Include the extra_weather_details layout -->
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
 </layout>
