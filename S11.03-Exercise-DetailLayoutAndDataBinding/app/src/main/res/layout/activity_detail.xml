@@ -34,7 +34,7 @@
 
 <!-- COMPLETED (25) Create a layout called primary_weather_info.xml -->
 <!-- COMPLETED (26) Surround the entire layout with <layout/> tags for data binding -->
-<!-- TODO (27) Using ConstraintLayout, create the primary weather info layout -->
+<!-- COMPLETED (27) Using ConstraintLayout, create the primary weather info layout -->
 <!-- TODO (32) Include the primary_weather_info layout -->
 
 <!-- TODO (28) Create a layout called extra_weather_details.xml -->
