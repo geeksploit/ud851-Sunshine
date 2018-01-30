@@ -101,8 +101,7 @@ public class DetailActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//      TODO (4) Remove the call to setContentView
-        setContentView(R.layout.activity_detail);
+        // COMPLETED (4) Remove the call to setContentView
 
 //      TODO (5) Remove all the findViewById calls
         mDateView = (TextView) findViewById(R.id.date);
