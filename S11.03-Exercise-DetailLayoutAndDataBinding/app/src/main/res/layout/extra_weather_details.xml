@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/humidity_label" />
+            android:text="@string/humidity_label" />
 
         <TextView
             android:id="@+id/humidity_value"
@@ -38,7 +38,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/pressure_label" />
+            android:text="@string/pressure_label" />
 
         <TextView
             android:id="@+id/pressure_value"
@@ -59,7 +59,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="@string/wind_label" />
+            android:text="@string/wind_label" />
 
         <TextView
             android:id="@+id/wind_value"
