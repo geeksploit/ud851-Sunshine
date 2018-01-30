@@ -275,8 +275,10 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (15) Create the content description for the description for a11y
 
-//      TODO (9) Use mDetailBinding to display the description and set the content description
+        // COMPLETED (9) Use mDetailBinding to display the description and set the content description
         /* Set the text to display the description*/
+        mDetailBinding.weatherPrimary.icon.setContentDescription(description);
+        mDetailBinding.weatherPrimary.description.setText(description);
 
 //      TODO (16) Set the content description of the icon to the same as the weather description a11y text
 
