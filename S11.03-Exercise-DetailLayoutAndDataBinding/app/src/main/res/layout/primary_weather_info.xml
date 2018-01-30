@@ -50,6 +50,17 @@
             app:layout_constraintTop_toBottomOf="@id/icon"
             tools:text="@string/condition_803" />
 
+        <TextView
+            android:id="@+id/temperature_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_right"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            tools:text="15\u00b0" />
+
     </android.support.constraint.ConstraintLayout>
 
 </layout>
