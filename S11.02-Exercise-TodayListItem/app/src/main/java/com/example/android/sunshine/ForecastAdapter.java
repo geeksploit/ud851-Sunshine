@@ -40,7 +40,9 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
 //  COMPLETED (4) Create a resources file called bools.xml within the res/values-port directory
 //  COMPLETED (5) Within bools.xml in the portrait specific directory, add a bool called use_today_layout and set it to false
 
-//  TODO (6) Declare constant IDs for the ViewType for today and for a future day
+    // COMPLETED (6) Declare constant IDs for the ViewType for today and for a future day
+    private static final int VIEW_TYPE_TODAY = 101;
+    private static final int VIEW_TYPE_FUTURE_DAY = 102;
 
     /* The context we use to utility methods, app resources and layout inflaters */
     private final Context mContext;
