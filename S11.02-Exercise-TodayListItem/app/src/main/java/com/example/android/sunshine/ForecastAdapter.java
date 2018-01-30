@@ -101,11 +101,15 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
     @Override
     public ForecastAdapterViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
-//      TODO (12) If the view type of the layout is today, use today layout
-
+        int layoutId;
+        switch (viewType) {
+            case VIEW_TYPE_TODAY:
+                // COMPLETED (12) If the view type of the layout is today, use today layout
+                layoutId = R.layout.forecast_list_item_today;
+                break;
 //      TODO (13) If the view type of the layout is future day, use future day layout
-
 //      TODO (14) Otherwise, throw an IllegalArgumentException
+        }
 
         View view = LayoutInflater
                 .from(mContext)
