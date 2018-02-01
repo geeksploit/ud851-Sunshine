@@ -22,7 +22,7 @@
   - In order to use Android's data binding capabilities, (to avoid having to type findViewById   -
   - over and over again) we wrap this layout in a <layout></layout> tag.                         -
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!-- TODO (14) Color the description, high temperature, and low temperature appropriately -->
+<!-- COMPLETED (14) Color the description, high temperature, and low temperature appropriately -->
 <!-- COMPLETED (15) Replace dimension values with @dimen resources -->
 <!-- COMPLETED (16) Use sans-serif-light font family for the temperature TextViews -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -84,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/today_forecast_list_item_vertical_margin"
+            android:textColor="@color/secondary_text"
             android:textSize="@dimen/today_forecast_list_item_weather_text_size"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintLeft_toLeftOf="@+id/weather_icon"
@@ -105,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
+            android:textColor="@color/primary_text"
             android:textSize="@dimen/today_forecast_list_item_high_temperature_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/weather_icon"
             app:layout_constraintHorizontal_bias="0.45"
@@ -127,6 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
+            android:textColor="@color/secondary_text"
             android:textSize="@dimen/list_item_low_temperature_text_view_size"
             app:layout_constraintBaseline_toBaselineOf="@+id/weather_description"
             app:layout_constraintLeft_toLeftOf="@+id/high_temperature"
