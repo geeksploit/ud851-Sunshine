@@ -25,7 +25,7 @@
   - depending on whether or not it is being touched. These can be set programmatically in Java,  -
   - but again, we wanted to avoid making things too complicated.                                 -
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!-- TODO (10) Color the TextViews for weather data appropriately -->
+<!-- COMPLETED (10) Color the TextViews for weather data appropriately -->
 <!-- TODO (11) Color the background for today's weather data appropriately -->
 <!-- COMPLETED (12) Replace dimension values with @dimen resources -->
 <!-- COMPLETED (13) Use sans-serif-light font family for the temperature TextViews -->
@@ -66,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/today_forecast_list_item_vertical_margin"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
         android:textSize="@dimen/today_forecast_list_item_weather_text_size"
         app:layout_constraintBottom_toTopOf="@+id/weather_icon"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -90,6 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/today_forecast_list_item_vertical_margin"
+        android:textColor="@color/white"
         android:textSize="@dimen/today_forecast_list_item_weather_text_size"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintLeft_toLeftOf="@+id/weather_icon"
@@ -111,6 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
         android:textSize="@dimen/today_forecast_list_item_high_temperature_text_size"
         app:layout_constraintBottom_toBottomOf="@+id/weather_icon"
         app:layout_constraintHorizontal_bias="0.45"
@@ -133,6 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
         android:textSize="@dimen/today_forecast_list_item_low_temperature_text_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/weather_description"
         app:layout_constraintLeft_toLeftOf="@+id/high_temperature"
