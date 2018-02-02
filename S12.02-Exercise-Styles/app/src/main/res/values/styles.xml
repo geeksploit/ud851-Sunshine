@@ -36,7 +36,13 @@
         <item name="actionBarStyle">@style/ActionBar.Solid.Sunshine.NoTitle</item>
     </style>
 
-    <!-- TODO (3) Create the DetailLabel style -->
+    <!-- COMPLETED (3) Create the DetailLabel style -->
+    <style name="DetailLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/detail_accent_label</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
 
     <!-- TODO (4) Create the ExtraWeatherMeasurement style -->
 
