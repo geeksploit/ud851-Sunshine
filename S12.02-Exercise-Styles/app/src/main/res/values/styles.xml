@@ -31,7 +31,10 @@
         <item name="logo">@drawable/ic_logo</item>
     </style>
 
-    <!-- TODO (2) Create a style for MainActivity called AppTheme.Forecast that uses our custom ActionBar style -->
+    <!-- COMPLETED (2) Create a style for MainActivity called AppTheme.Forecast that uses our custom ActionBar style -->
+    <style name="AppTheme.Forecast">
+        <item name="actionBarStyle">@style/ActionBar.Solid.Sunshine.NoTitle</item>
+    </style>
 
     <!-- TODO (3) Create the DetailLabel style -->
 
