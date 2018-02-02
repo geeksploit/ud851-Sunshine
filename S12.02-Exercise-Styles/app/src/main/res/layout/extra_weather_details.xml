@@ -91,15 +91,13 @@
             app:layout_constraintVertical_bias="0.65999997" />
 
         <!-- Wind measurement -->
-        <!-- TODO (11) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
+        <!-- COMPLETED (11) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
         <TextView
             android:id="@+id/wind_measurement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            style="@style/ExtraWeatherMeasurement"
             app:layout_constraintBottom_toBottomOf="@+id/wind_label"
             app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
-            tools:text="4km/h NW"/>
+            tools:text="4km/h NW" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
