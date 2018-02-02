@@ -61,17 +61,14 @@
             tools:text="38%"/>
 
         <!-- Pressure label -->
-        <!-- TODO (8) Replace the appropriate attributes with the DetailLabel style -->
+        <!-- COMPLETED (8) Replace the appropriate attributes with the DetailLabel style -->
         <TextView
             android:id="@+id/pressure_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            style="@style/DetailLabel"
             android:text="@string/pressure_label"
-            android:textColor="@color/detail_accent_label"
             app:layout_constraintBottom_toBottomOf="@+id/extra_details"
             app:layout_constraintLeft_toLeftOf="@+id/extra_details"
-            app:layout_constraintTop_toTopOf="@+id/extra_details"/>
+            app:layout_constraintTop_toTopOf="@+id/extra_details" />
 
         <!-- Pressure measurement -->
         <!-- TODO (9) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
