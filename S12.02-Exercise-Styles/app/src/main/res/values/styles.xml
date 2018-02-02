@@ -44,6 +44,11 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <!-- TODO (4) Create the ExtraWeatherMeasurement style -->
+    <!-- COMPLETED (4) Create the ExtraWeatherMeasurement style -->
+    <style name="ExtraWeatherMeasurement" parent="@style/TextAppearance.AppCompat.Headline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
 </resources>
