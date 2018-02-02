@@ -71,15 +71,13 @@
             app:layout_constraintTop_toTopOf="@+id/extra_details" />
 
         <!-- Pressure measurement -->
-        <!-- TODO (9) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
+        <!-- COMPLETED (9) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
         <TextView
             android:id="@+id/pressure"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            style="@style/ExtraWeatherMeasurement"
             app:layout_constraintBottom_toBottomOf="@+id/pressure_label"
             app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
-            tools:text="995 hPa"/>
+            tools:text="995 hPa" />
 
         <!-- Wind label -->
         <!-- COMPLETED (10) Replace the appropriate attributes with the DetailLabel style -->
