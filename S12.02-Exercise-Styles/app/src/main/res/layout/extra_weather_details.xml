@@ -50,15 +50,16 @@
             app:layout_constraintVertical_bias="0.33" />
 
         <!-- Humidity measurement -->
-        <!-- TODO (7) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
+        <!-- COMPLETED (7) Replace the appropriate attributes with the ExtraWeatherMeasurement style -->
         <TextView
             android:id="@+id/humidity"
+            style="@style/ExtraWeatherMeasurement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="@+id/humidity_label"
             app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
-            tools:text="38%"/>
+            tools:text="38%" />
 
         <!-- Pressure label -->
         <!-- COMPLETED (8) Replace the appropriate attributes with the DetailLabel style -->
