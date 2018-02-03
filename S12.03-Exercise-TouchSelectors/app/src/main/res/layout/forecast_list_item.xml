@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 
-<!-- TODO (1) Create a touch selector called touch_selector for the list item -->
+<!-- COMPLETED (1) Create a touch selector called touch_selector for the list item -->
 
 <!-- TODO (2) Use touch_selector as the background for the list item -->
 <android.support.constraint.ConstraintLayout
